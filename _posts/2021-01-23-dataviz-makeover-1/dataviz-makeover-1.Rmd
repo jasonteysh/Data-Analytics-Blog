@@ -17,11 +17,21 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
+The original visualization can be found on Page 22 of [this report](https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx) 
 
 ## Section A: Critique of Original Viz 
 ### Clarity
-xxx
+
+
+| S/N | Comments                                                                            |
+|-----|-------------------------------------------------------------------------------------|
+| 1   | Purpose of visualisation not well-conveyed in title                                 |
+| 2   | Lead-in Paragraph confusing and no mentioning on the change in the percentage point |
+| 3   |                                                                                     |
+| 4   |                                                                                     |
+| 5   |                                                                                     |
+| 6   |                                                                                     |
+| 7   |                                                                                     |
 
 ### Aesthetic
 xxx
@@ -30,9 +40,9 @@ xxx
 xxx
 
 ## Section C: Redesigned Visualization
-xxx
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\makeover1_concept.jpg"> 
 
-## Section D: Ste-by-Step for Viz Makeover 
+## Section D: Step-by-Step for Viz Makeover 
 xxx xxx
 
 ## Section E: Observations 
