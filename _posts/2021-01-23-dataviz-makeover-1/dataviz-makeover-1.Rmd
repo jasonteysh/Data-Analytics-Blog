@@ -1,0 +1,38 @@
+---
+title: "DataViz Makeover 1"
+description: |
+  This post presents a critical review, recommendations, and makeover of a visualization found in MOM's "_Report: Labour Force in Singapore 2019_"
+author:
+  - name: Jason Tey
+    email: Jason.Tey.2020@mitb.smu.edu.sg
+date: 01-23-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+## Section A: Critique of Original Viz 
+### Clarity
+xxx
+
+### Aesthetic
+xxx
+
+## Section B: Suggested Improvement
+xxx
+
+## Section C: Redesigned Visualization
+xxx
+
+## Section D: Ste-by-Step for Viz Makeover 
+xxx
+
+## Section E: Observations 
+xxx 

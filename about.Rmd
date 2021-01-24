@@ -1,0 +1,9 @@
+---
+title: "About this blog"
+description: |
+  This blog showcases some of the data analytics project by the author, Jason! 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
