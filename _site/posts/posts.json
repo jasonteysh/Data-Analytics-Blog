@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-01-23-dataviz-makeover-1/",
+    "title": "DataViz Makeover 1",
+    "description": "This post presents a critical review, recommendations, and makeover of a visualization found in MOM's \"_Report: Labour Force in Singapore 2019_\"",
+    "author": [
+      {
+        "name": "Jason Tey",
+        "url": {}
+      }
+    ],
+    "date": "2021-01-25",
+    "categories": [],
+    "contents": "\r\n\r\nContents\r\nSection A: Critique of Original VizClarity\r\nAesthetic\r\n\r\nSection B: Suggested Improvement\r\nSection C: Redesigned Visualization\r\nSection D: Ste-by-Step for Viz Makeover\r\nSection E: Observations\r\n\r\nSection A: Critique of Original Viz\r\nClarity\r\nxxx\r\nAesthetic\r\nxxx\r\nSection B: Suggested Improvement\r\nxxx\r\nSection C: Redesigned Visualization\r\nxxx\r\nSection D: Ste-by-Step for Viz Makeover\r\nxxx\r\nSection E: Observations\r\nxxx\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-01-25T00:42:36+08:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/welcome/",
     "title": "Welcome to Jason's Data Analytics Blog",
     "description": "Welcome to my blog, I hope you enjoy \nreading the content of it!",
@@ -14,23 +31,6 @@
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
     "last_modified": "2021-01-23T16:42:09+08:00",
-    "input_file": "welcome.utf8.md"
-  },
-  {
-    "path": "posts/2021-01-23-dataviz-makeover-1/",
-    "title": "DataViz Makeover 1",
-    "description": "This post presents a critical review, recommendations, and makeover of a visualization found in MOM's \"_Report: Labour Force in Singapore 2019_\"",
-    "author": [
-      {
-        "name": "Jason Tey",
-        "url": {}
-      }
-    ],
-    "date": "2021-01-23",
-    "categories": [],
-    "contents": "\r\nSection A: Critique of Original Viz\r\nClarity\r\nxxx\r\nAesthetic\r\nxxx\r\nSection B: Suggested Improvement\r\nxxx\r\nSection C: Redesigned Visualization\r\nxxx\r\nSection D: Ste-by-Step for Viz Makeover\r\nxxx\r\nSection E: Observations\r\nxxx\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2021-01-25T00:12:44+08:00",
-    "input_file": "dataviz-makeover-1.utf8.md"
+    "input_file": {}
   }
 ]

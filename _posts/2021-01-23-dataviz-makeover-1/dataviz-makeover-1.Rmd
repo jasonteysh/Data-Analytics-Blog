@@ -5,9 +5,10 @@ description: |
 author:
   - name: Jason Tey
     email: Jason.Tey.2020@mitb.smu.edu.sg
-date: 01-23-2021
+date: 01-25-2021
 output:
   distill::distill_article:
+    toc: true
     self_contained: false
 ---
 

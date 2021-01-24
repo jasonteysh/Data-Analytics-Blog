@@ -9,11 +9,18 @@
       "last_modified": "2021-01-23T16:42:38+08:00"
     },
     {
+      "path": "dataviz.html",
+      "title": "Data Visualization Makeover",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-01-25T00:43:06+08:00"
+    },
+    {
       "path": "index.html",
       "title": "Jason's Data Analytics Blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-01-23T16:42:09+08:00"
+      "last_modified": "2021-01-25T00:42:36+08:00"
     }
   ],
   "collections": ["posts/posts.json"]

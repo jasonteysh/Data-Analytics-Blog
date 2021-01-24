@@ -1,0 +1,12 @@
+---
+title: "Data Visualization Makeover"
+listing:
+  posts:
+    - 2021-01-23-dataviz-makeover-1
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
