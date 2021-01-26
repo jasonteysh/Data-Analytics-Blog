@@ -92,8 +92,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-01-25"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-01-25"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-01-27"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-01-27"/>
   <meta name="article:author" content="Jason Tey"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -111,12 +111,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["DataViz Makeover 1"]},{"type":"character","attributes":{},"value":["This post presents a critical review, recommendations, and makeover of a visualization found in MOM's \"_Report: Labour Force in Singapore 2019_\"\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email"]}},"value":[{"type":"character","attributes":{},"value":["Jason Tey"]},{"type":"character","attributes":{},"value":["Jason.Tey.2020@mitb.smu.edu.sg"]}]}]},{"type":"character","attributes":{},"value":["01-25-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["DataViz Makeover 1"]},{"type":"character","attributes":{},"value":["This post presents a critical review, recommendations, and makeover of a visualization found in MOM's \"_Report: Labour Force in Singapore 2019_\"\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email"]}},"value":[{"type":"character","attributes":{},"value":["Jason Tey"]},{"type":"character","attributes":{},"value":["Jason.Tey.2020@mitb.smu.edu.sg"]}]}]},{"type":"character","attributes":{},"value":["01-27-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","makeover1_concept.jpg"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","makeover1.PNG","makeover1_concept.jpg","makeover1issues.PNG","makeover1original.PNG"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1420,7 +1420,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"DataViz Makeover 1","description":"This post presents a critical review, recommendations, and makeover of a visualization found in MOM's \"_Report: Labour Force in Singapore 2019_\"","authors":[{"author":"Jason Tey","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-01-25T00:00:00.000+08:00","citationText":"Tey, 2021"}
+{"title":"DataViz Makeover 1","description":"This post presents a critical review, recommendations, and makeover of a visualization found in MOM's \"_Report: Labour Force in Singapore 2019_\"","authors":[{"author":"Jason Tey","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-01-27T00:00:00.000+08:00","citationText":"Tey, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1439,7 +1439,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-byline">
   Jason Tey  
   
-<br/>01-25-2021
+<br/>01-27-2021
 </div>
 
 <div class="d-article">
@@ -1451,64 +1451,230 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#clarity">Clarity</a></li>
 <li><a href="#aesthetic">Aesthetic</a></li>
 </ul></li>
-<li><a href="#section-b-suggested-improvement">Section B: Suggested Improvement</a></li>
-<li><a href="#section-c-redesigned-visualization">Section C: Redesigned Visualization</a></li>
+<li><a href="#section-b-suggested-improvement">Section B: Suggested Improvement</a><ul>
+<li><a href="#clarity-1">Clarity</a></li>
+<li><a href="#clarity-2">Clarity</a></li>
+</ul></li>
+<li><a href="#section-c-redesigned-visualization">Section C: Redesigned Visualization</a><ul>
+<li><a href="#makeover-concept">Makeover Concept</a></li>
+<li><a href="#redesigned-viz">Redesigned Viz</a></li>
+</ul></li>
 <li><a href="#section-d-step-by-step-for-viz-makeover">Section D: Step-by-Step for Viz Makeover</a></li>
 <li><a href="#section-e-observations">Section E: Observations</a></li>
 </ul>
 </nav>
 </div>
-<p>The original visualization can be found on Page 22 of <a href="https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx">this report</a></p>
+<p>The original visualization is presented below and can be found on Page 22 of <a href="https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx">this report</a></p>
+<p><img src="makeover1original.PNG"></p>
 <h2 id="section-a-critique-of-original-viz">Section A: Critique of Original Viz</h2>
+<p>This section provides a critique of the original visualization and comments on both clarity and aesthetic aspects that could be further improved on. A total of 8 clarity issues and 5 aesthetic issues (as shown below) were identified.</p>
+<p><img src="makeover1issues.PNG"></p>
 <h3 id="clarity">Clarity</h3>
 <table>
 <colgroup>
 <col style="width: 5%" />
-<col style="width: 94%" />
+<col style="width: 7%" />
+<col style="width: 87%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>S/N</th>
+<th>Issue</th>
 <th>Comments</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>Purpose of visualisation not well-conveyed in title</td>
+<td>Title</td>
+<td>The purpose and objective of the original visualization was not conveyed well in the title of the chart. It misleads people into thinking that the graph shows absolute number of labour force by age when it is in fact showing the share of each age group within the work force.</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td>Lead-in Paragraph confusing and no mentioning on the change in the percentage point</td>
+<td>Subtitle</td>
+<td>Subtitle that says “Per Cent” does not elaborate on what this per cent is referring to, nor explain which figure is the percentage derived from what base. Together with the title, it confuses viewers on the data being presented.</td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td></td>
+<td>Axis Label</td>
+<td>Missing explanation for the “June 2009” and “June 2019” row data – without reading the paragraph before, there is no easy way to figure out that these numbers refer to share of workers in each age group within the labour force.</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td></td>
+<td>Y-Axis</td>
+<td>The graphs are literally floating with no Y-axis and its corresponding values (much less any gridlines) to anchor the actual value corresponding to each age group – this is as good as drawing random lines and is a critical flaw of the original viz. There is no easy way to know if the lines are corresponding to the correct Y-value even if we are provided with the data.</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td></td>
+<td>Choice of Viz Type</td>
+<td>Since the data is segregated by discrete age bins, line graph – which are more suitable for continuous x-variables, should be avoided to prevent giving false impression that the data is continuous within the bin (e.g. a kink for the 45-49 age, it leaves room for misinterpretation that a downtrend from 45 years old changed to an uptrend at 47 years old).</td>
 </tr>
 <tr class="even">
 <td>6</td>
-<td></td>
+<td>Comparison Across Year</td>
+<td>Since the objective of the visualization is to explain that there are more older workers in the labour force, the choice of two line graphs is inefficient as it requires viewers to do a mental comparison of the higher line to derive the changes over time. Bearing the objective in mind, the difference between the two years could have been calculated and directly presented instead.</td>
 </tr>
 <tr class="odd">
 <td>7</td>
-<td></td>
+<td>Lead-in Paragraph</td>
+<td>Lead-in paragraph is not supported by the visualization, in fact, it creates more confusion. While the age bins are split into 5-year bands (e.g. 15-19, with the only exception being those above 70), the paragraphs discusses the share of labour force by bigger bins, lumping together those aged 55 and over, as well as the 25-54 groups. This creates confusion as the figures quotes – “from 16% in 2009 to 25% in 2019” and “declined from 75% to 67%” are all not interpretable from the visualization. The need for mental sums to add up the percentages across a few data points presented in the table is unintuitive and user-unfriendly. In terms of comparison between the years, author could have also enhance the readability by deriving the change in percentage points across the two years.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Choice of Data</td>
+<td>As a general comment to the overall choice of data for the discussion, it might be clearer to talk about the change in Labour Force Participation Rate (LFPR) for each age group, rather than the composition of labour force – which could be more indicative of demographic change (e.g. ageing population) than shift in labour decisions.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="aesthetic">Aesthetic</h3>
-<p>xxx</p>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 7%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S/N</th>
+<th>Issue</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9</td>
+<td>Definition</td>
+<td>Visualization appears grainy and pixelated.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Data Points and Labels</td>
+<td>No softgrid nor data point to guide visual on which year corresponds to which point</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Font Consistency</td>
+<td>Inconsistent font colour for same data source – blue for the line is different from the blue words on chart, which is again different for the blue in the table below</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Choice of Font Colours</td>
+<td>Choice of font colour does not contrast with background as well, hence not easy to read</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Alignment</td>
+<td>Information (Source and Note) at the bottom not aligned</td>
+</tr>
+</tbody>
+</table>
 <h2 id="section-b-suggested-improvement">Section B: Suggested Improvement</h2>
-<p>xxx</p>
+<p>This section provides some suggested improvements that could be implemented to resolve issues discussed in Section A.</p>
+<h3 id="clarity-1">Clarity</h3>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S/N</th>
+<th>Issues</th>
+<th>Suggested Improvements</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Title</td>
+<td>The title of the visualization could be modified to reflect the key message that the viz is trying to convey, and should correspond accurately to the main features of the viz</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Subtitle</td>
+<td>Subtitle could be modified to provide key information to guide viewers in deciphering the viz (e.g. data and corresponding unit presented in the viz, year of data, location, and X-axis variable)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Axis Label</td>
+<td>Provide clear axis labels with accurate units of measure to prevent confusing readers</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Y-Axis</td>
+<td>Inclusion of a Y-axis with suitable tick marks and guiding soft gridlines to enhance readability is important</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Choice of Viz Type</td>
+<td>For discrete variables (as in the bins of age range used), a bar chart would serve to provide better clarity to prevent misinterpretation</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Comparison Across Year</td>
+<td>To achieve the objective to explain that there are proportionately more older workers in the labour force in 2019 than 2009, the difference between the two years could have been calculated and directly presented for a more effective visualization.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Lead-in Paragraph</td>
+<td>Lead-in paragraph should be supported by the viz, and any figures quoted by the paragraph should be available and obvious from the viz. Better interpretation and processing of the data (e.g. calculating and presenting the difference, if that is the objective) would also enhance clarity of the viz.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Choice of Data</td>
+<td>Using data on the Labour Force Participation Rate (LFPR) for each age group could provide clearer comparison to achieve the objective of the viz</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clarity-2">Clarity</h3>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S/N</th>
+<th>Issues</th>
+<th>Suggested Improvements</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9</td>
+<td>Definition</td>
+<td>Ensure visualization is not pixelated and has suitable definition</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Data Points and Labels</td>
+<td>Provide clear background gridline to enhance readability and data points/labels for viewer’s ease of reference</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Font Consistency</td>
+<td>Ensure consistent font type and colour are used to represent distinct sets of data for consistency. Useful colors will also provide additional dimensions to enhance effectiveness of viz</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Choice of Font Colours</td>
+<td>To select contrasting colours for ease of reading</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Alignment</td>
+<td>As much as possible, to provide proper alignment within viz to reduce distraction caused by messiness</td>
+</tr>
+</tbody>
+</table>
 <h2 id="section-c-redesigned-visualization">Section C: Redesigned Visualization</h2>
+<p>This section presents an alternative that improves on the original visualization based on the points discussed in Section A &amp; B.</p>
+<h3 id="makeover-concept">Makeover Concept</h3>
 <p><img src="makeover1_concept.jpg"></p>
+<h3 id="redesigned-viz">Redesigned Viz</h3>
+<p><img src="makeover1.PNG"></p>
 <h2 id="section-d-step-by-step-for-viz-makeover">Section D: Step-by-Step for Viz Makeover</h2>
 <p>xxx xxx</p>
 <h2 id="section-e-observations">Section E: Observations</h2>

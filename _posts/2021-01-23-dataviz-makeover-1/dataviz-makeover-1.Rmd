@@ -5,7 +5,7 @@ description: |
 author:
   - name: Jason Tey
     email: Jason.Tey.2020@mitb.smu.edu.sg
-date: 01-25-2021
+date: 01-27-2021
 output:
   distill::distill_article:
     toc: true
@@ -17,30 +17,78 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-The original visualization can be found on Page 22 of [this report](https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx) 
+The original visualization is presented below and can be found on Page 22 of [this report](https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx) 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\makeover1original.PNG"> 
+
 
 ## Section A: Critique of Original Viz 
+
+This section provides a critique of the original visualization and comments on both clarity and aesthetic aspects that could be further improved on. A total of 8 clarity issues and 5 aesthetic issues (as shown below) were identified. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\makeover1issues.PNG"> 
+
 ### Clarity
 
 
-| S/N | Comments                                                                            |
-|-----|-------------------------------------------------------------------------------------|
-| 1   | Purpose of visualisation not well-conveyed in title                                 |
-| 2   | Lead-in Paragraph confusing and no mentioning on the change in the percentage point |
-| 3   |                                                                                     |
-| 4   |                                                                                     |
-| 5   |                                                                                     |
-| 6   |                                                                                     |
-| 7   |                                                                                     |
+| S/N | Issue |Comments                                                                            |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1   | Title | The purpose and objective of the original visualization was not conveyed well in the title of the chart. It misleads people into thinking that the graph shows absolute number of labour force by age when it is in fact showing the share of each age group within the work force. |
+| 2   | Subtitle | Subtitle that says “Per Cent” does not elaborate on what this per cent is referring to, nor explain which figure is the percentage derived from what base. Together with the title, it confuses viewers on the data being presented. |
+| 3   | Axis Label | Missing explanation for the “June 2009” and “June 2019” row data – without reading the paragraph before, there is no easy way to figure out that these numbers refer to share of workers in each age group within the labour force. |
+| 4   | Y-Axis | The graphs are literally floating with no Y-axis and its corresponding values (much less any gridlines) to anchor the actual value corresponding to each age group – this is as good as drawing random lines and is a critical flaw of the original viz. There is no easy way to know if the lines are corresponding to the correct Y-value even if we are provided with the data. |
+| 5   | Choice of Viz Type | Since the data is segregated by discrete age bins, line graph – which are more suitable for continuous x-variables, should be avoided to prevent giving false impression that the data is continuous within the bin (e.g. a kink for the 45-49 age, it leaves room for misinterpretation that a downtrend from 45 years old changed to an uptrend at 47 years old).  |
+| 6   | Comparison Across Year | Since the objective of the visualization is to explain that there are more older workers in the labour force, the choice of two line graphs is inefficient as it requires viewers to do a mental comparison of the higher line to derive the changes over time. Bearing the objective in mind, the difference between the two years could have been calculated and directly presented instead. |
+| 7   | Lead-in Paragraph | Lead-in paragraph is not supported by the visualization, in fact, it creates more confusion. While the age bins are split into 5-year bands (e.g. 15-19, with the only exception being those above 70), the paragraphs discusses the share of labour force by bigger bins, lumping together those aged 55 and over, as well as the 25-54 groups. This creates confusion as the figures quotes – “from 16% in 2009 to 25% in 2019” and “declined from 75% to 67%” are all not interpretable from the visualization. The need for mental sums to add up the percentages across a few data points presented in the table is unintuitive and user-unfriendly. In terms of comparison between the years, author could have also enhance the readability by deriving the change in percentage points across the two years. |
+| 8   | Choice of Data | As a general comment to the overall choice of data for the discussion, it might be clearer to talk about the change in Labour Force Participation Rate (LFPR) for each age group, rather than the composition of labour force – which could be more indicative of demographic change (e.g. ageing population) than shift in labour decisions.  |
 
 ### Aesthetic
-xxx
+
+| S/N | Issue |Comments                                                                            |
+|-----|-------|------------------------------------------------------------------------------------|
+| 9   | Definition | Visualization appears grainy and pixelated. |
+| 10  | Data Points and Labels | No softgrid nor data point to guide visual on which year corresponds to which point |
+| 11  | Font Consistency | Inconsistent font colour for same data source – blue for the line is different from the blue words on chart, which is again different for the blue in the table below  |
+| 12  | Choice of Font Colours | Choice of font colour does not contrast with background as well, hence not easy to read   |
+| 13  | Alignment | Information (Source and Note) at the bottom not aligned  |
 
 ## Section B: Suggested Improvement
-xxx
+
+This section provides some suggested improvements that could be implemented to resolve issues discussed in Section A. 
+
+### Clarity 
+
+| S/N | Issues | Suggested Improvements                                                                            |
+|-----|-----|-------------------------------------------------------------------------------------|
+| 1   | Title | The title of the visualization could be modified to reflect the key message that the viz is trying to convey, and should correspond accurately to the main features of the viz |
+| 2   | Subtitle | Subtitle could be modified to provide key information to guide viewers in deciphering the viz (e.g. data and corresponding unit presented in the viz, year of data, location, and X-axis variable) |
+| 3   | Axis Label | Provide clear axis labels with accurate units of measure to prevent confusing readers |
+| 4   | Y-Axis | Inclusion of a Y-axis with suitable tick marks and guiding soft gridlines to enhance readability is important |
+| 5   | Choice of Viz Type | For discrete variables (as in the bins of age range used), a bar chart would serve to provide better clarity to prevent misinterpretation   |
+| 6   | Comparison Across Year | To achieve the objective to explain that there are proportionately more older workers in the labour force in 2019 than 2009, the difference between the two years could have been calculated and directly presented for a more effective visualization. |
+| 7   | Lead-in Paragraph | Lead-in paragraph should be supported by the viz, and any figures quoted by the paragraph should be available and obvious from the viz. Better interpretation and processing of the data (e.g. calculating and presenting the difference, if that is the objective) would also enhance clarity of the viz.
+| 8   | Choice of Data | Using data on the Labour Force Participation Rate (LFPR) for each age group could provide clearer comparison to achieve the objective of the viz  |
+
+### Clarity 
+
+| S/N | Issues | Suggested Improvements                                                                            |
+|-----|-----|-------------------------------------------------------------------------------------|
+| 9   | Definition | Ensure visualization is not pixelated and has suitable definition |
+| 10  | Data Points and Labels | Provide clear background gridline to enhance readability and data points/labels for viewer's ease of reference  |
+| 11  | Font Consistency | Ensure consistent font type and colour are used to represent distinct sets of data for consistency. Useful colors will also provide additional dimensions to enhance effectiveness of viz |
+| 12  | Choice of Font Colours | To select contrasting colours for ease of reading |
+| 13  | Alignment | As much as possible, to provide proper alignment within viz to reduce distraction caused by messiness |
+
 
 ## Section C: Redesigned Visualization
+
+This section presents an alternative that improves on the original visualization based on the points discussed in Section A & B. 
+
+### Makeover Concept
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\makeover1_concept.jpg"> 
+
+### Redesigned Viz
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\makeover1.PNG"> 
 
 ## Section D: Step-by-Step for Viz Makeover 
 xxx xxx
