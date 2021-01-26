@@ -88,6 +88,9 @@ This section presents an alternative that improves on the original visualization
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\makeover1_concept.jpg"> 
 
 ### Redesigned Viz
+
+The redesigned visualization can be accessed via [this link](https://public.tableau.com/profile/jason.tey#!/vizhome/DataVizMakeover1withNotes/Dashboard2)
+
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\makeover1.PNG"> 
 
 ## Section D: Step-by-Step for Viz Makeover 
