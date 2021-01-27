@@ -1,7 +1,9 @@
 ---
 title: "About this blog"
 description: |
-  This blog showcases some of the data analytics project by the author, Jason! 
+  This blog showcases some of the data analytics project, visualization makeover, and everything data by the author, Jason! 
+  
+  To viz or not to viz - there's no doubt about it! 
 ---
 
 ```{r setup, include=FALSE}

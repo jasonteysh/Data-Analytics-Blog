@@ -1,7 +1,9 @@
 ---
-title: "DataViz Makeover 1"
+title: "ISSS608 DataViz Makeover 1"
 description: |
-  This post presents a critical review, recommendations, and makeover of a visualization found in MOM's "_Report: Labour Force in Singapore 2019_"
+  This post presents a critical review, recommendations, and makeover of a visualization found in MOM's "_Report: Labour Force in Singapore 2019_". 
+  
+  This post constitutes part of the assessment for credit towards the Singapore Management Univerisity module ISSS608 Visual Analytics and Application, AY2020/2021 Term 2. 
 author:
   - name: Jason Tey
     email: Jason.Tey.2020@mitb.smu.edu.sg
@@ -226,9 +228,11 @@ And for the very last step, we save the visualization onto Tableau Public.
 Tada! 
 
 ## Section E: Observations 
-1.
-2.
-3.
-4.
-5.
-6.
+
+1. The first key observation based on the redesigned visualization is that the three Senior age groups (Note: according to [senior-citizen-singapore.com](http://senior-citizen-singapore.com/), the Senior Citizen Act of Singapore defines a "Senior" as someone who has attained 60 years or higher) has the largest increase in Labour Force Participation Rate (LFPR) from 2009 to 2019. This is immediately brought to focus both by the segmented region with shaded background and captioned as "Seniors (Aged 60 & Older)", as well as the title, which directly informs the reader of this most obvious and key takeaway from the visualization. The largest single age-group increase in LFPR belongs to those aged 65-69 year-old - increasing by 16.2 percentage point, from 2009's 29.9% participation rate to 2019's 46.1% participation rate. One of the reasons for this could be the [increase in the legal re-employment age from 65 to 67 from 1 July 2017](https://www.mom.gov.sg/newsroom/press-releases/2017/0109-improving-re-employment-opportunities-for-older-workers). This would mean that employers must offer re-employment to eligible employees up to age of 67 instead of 65 - that is, more elderly would be protected by law to be able to continue working past 65 years old if eligible. The next two age-groups with highest increase in LFPR are the 60-64 year-old and those 70 & older - as [Singapore's average life expectancy increased](https://www.singstat.gov.sg/-/media/files/visualising_data/infographics/population/life-expectancy.pdf#:~:text=Data%20pertain%20to%20the%20life%20expectancy%20at%20birth,81.481.4%2082.682.6%2083.683.6%20Singapore%20Residents%20Can%20Expect%20to) from 81.4 years in 2009 to 83.6 years in 2019, it will be a [new norm for more seniors to be at work](https://www.aseantoday.com/2019/02/seniors-at-work-the-new-norm-for-ageing-in-singapore/) for an ageing Singapore. The reasons are twofold: (i) active working age will need to be lengthen to save up more for longer retirement years; and (ii) older workers may choose to stay in the workforce longer to keep them physically and mentally active, keeping demantia and loneliness at bay. All in all, while the change in Senior's LFPR is obvious from the visualization, its reason is manyfolds.
+
+2. The second key observation from the chart is the other elephant in the room: the only age group that saw a decline in its LFPR - those aged 25-29 year-old. One plausible reason for this could be an [increase in average schooling years of residents aged 25 and over](https://www.singstat.gov.sg/modules/infographics/population), from 2009's 9.7 years to 11,2 years in 2019. This is further supported by the [increase in proportion of residents who had attained University degree as their highest qualification](https://www.singstat.gov.sg/modules/infographics/population) - from 22.5% in 2009 to 32.4% in 2019. Both these statistics point to the fact that people are increasingly spending more time schooling than working, and hence a reduction in the LFPR. 
+
+3. Lastly, let's discuss the flat plateau for those aged between 30 to 59 which saw the LFPR within the age group increase modestly, ranging from 0.8 percentage point to 6.6 percentage point. From the main viz, it told the factual story that the LFPR for this group of residents did not increase much for the 10 year from 2009 to 2019. However, this is where it is crucial to drill deeper into details and understand the importance of the supporting data table included in the visualization - the actual LFPR (%) for each age group. Based on the table, it is easy to realise that the participation rate for this main bunch of residents were already very high in 2009 to begin with (from 68.4% to 89.3%) - that is, majority of the subpopulation within these age groups were already actively participating in the labour force (i.e. [either employed or actively looking for job](https://www.investopedia.com/terms/p/participationrate.asp)). As there are bound to be discouraged workers and some form of frictional unemployment that triggers individual to leave the labour force, it is much more difficult to increase the LFPR for age-groups where the rate was already high, especially those nearer to the 100%. In summary, it is not unexpected to see low LFPR percentage change for these age groups with higher LFPR and there is no cause for worry. It would, however, be interesting to see how this figure has changed for the year of 2020 when the unanticipated adverse event in the form of global pandemic hit. 
+
+As a rejoiner, it is thus important to provide clear and informative visualization that are aesthetically pleasing - such observations mentioned in this section would have been difficult to arrive at with the original visualization that lacked clarity in the information presented and key message it is trying to drive at. 

@@ -3,10 +3,10 @@
     {
       "path": "about.html",
       "title": "About this blog",
-      "description": "This blog showcases some of the data analytics project by the author, Jason! ",
+      "description": "This blog showcases some of the data analytics project by the author, Jason! \n\nTo viz or not to viz - there's no doubt about it! ",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-01-23T16:42:38+08:00"
+      "last_modified": "2021-01-27T21:50:34+08:00"
     },
     {
       "path": "dataviz.html",
@@ -20,7 +20,7 @@
       "title": "Jason's Data Analytics Blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-01-25T02:47:57+08:00"
+      "last_modified": "2021-01-27T21:49:58+08:00"
     }
   ],
   "collections": ["posts/posts.json"]

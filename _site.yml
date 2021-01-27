@@ -1,13 +1,13 @@
 name: "Blog"
-title: "IDEA"
+title: "Jason's Visual Analytics Blog"
 description: |
-  IDEA
+  To viz or not to viz - there is no doubt about it. 
 output_dir: "_site"
 navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "DataViz Maekover"
+    - text: "DataViz Makeover"
       href: dataviz.html
     - text: "Visual Analytics Project"
       href: vap.html
