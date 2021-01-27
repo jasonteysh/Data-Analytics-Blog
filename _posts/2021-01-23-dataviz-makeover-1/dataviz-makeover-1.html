@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","makeover1.PNG","makeover1_concept.jpg","makeover1issues.PNG","makeover1original.PNG"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","makeover1.PNG","makeover1_concept.jpg","makeover1issues.PNG","makeover1original.PNG","step1.PNG","step10.png","step11.png","step12.png","step13.png","step14.PNG","step15.png","step16.PNG","step17.PNG","step18.png","step19.png","step2.PNG","step20.png","step21.png","Step22.png","Step23.png","Step24.png","Step25.PNG","Step26.png","Step27.png","Step28.PNG","Step29.PNG","step3.png","Step30.png","Step31.png","Step32.PNG","Step33.png","Step34.PNG","step4.PNG","step5.PNG","step6.PNG","step7.PNG","step8.PNG","step9.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1464,11 +1464,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 </nav>
 </div>
-<p>The original visualization is presented below and can be found on Page 22 of <a href="https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx">this report</a></p>
-<p><img src="makeover1original.PNG"></p>
+<p>The original visualization presented as Chart 6 on Page 22 of <a href="https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx">MOM’s Report: Labour Force in Singapore 2019</a> is reproduced below</p>
+<div class="layout-chunk" data-layout="1-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="makeover1original.PNG" alt="Original Visualization by MOM, Singapore" width="393" />
+<p class="caption">
+Figure 1: Original Visualization by MOM, Singapore
+</p>
+</div>
+</div>
 <h2 id="section-a-critique-of-original-viz">Section A: Critique of Original Viz</h2>
 <p>This section provides a critique of the original visualization and comments on both clarity and aesthetic aspects that could be further improved on. A total of 8 clarity issues and 5 aesthetic issues (as shown below) were identified.</p>
-<p><img src="makeover1issues.PNG"></p>
+<div class="layout-chunk" data-layout="1-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="makeover1issues.PNG" alt="Critique on Original Visualization" width="332" />
+<p class="caption">
+Figure 2: Critique on Original Visualization
+</p>
+</div>
+</div>
 <h3 id="clarity">Clarity</h3>
 <table>
 <colgroup>
@@ -1672,12 +1686,72 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="section-c-redesigned-visualization">Section C: Redesigned Visualization</h2>
 <p>This section presents an alternative that improves on the original visualization based on the points discussed in Section A &amp; B.</p>
 <h3 id="makeover-concept">Makeover Concept</h3>
-<p><img src="makeover1_concept.jpg"></p>
+<div class="layout-chunk" data-layout="1-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="makeover1_concept.jpg" alt="Makeover Concept"  />
+<p class="caption">
+Figure 3: Makeover Concept
+</p>
+</div>
+</div>
 <h3 id="redesigned-viz">Redesigned Viz</h3>
-<p>The redesigned visualization can be accessed via <a href="https://public.tableau.com/profile/jason.tey#!/vizhome/DataVizMakeover1withNotes/Dashboard2">this link</a></p>
-<p><img src="makeover1.PNG"></p>
+<p>The redesigned visualization can be accessed via <a href="https://public.tableau.com/profile/jason.tey#!/vizhome/DataVizMakeover1_16115150979860/VizMakeover1?publish=yes">this link</a></p>
+<div class="layout-chunk" data-layout="1-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="makeover1.PNG" alt="Redeisgned Visualization" width="779" />
+<p class="caption">
+Figure 4: Redeisgned Visualization
+</p>
+</div>
+</div>
 <h2 id="section-d-step-by-step-for-viz-makeover">Section D: Step-by-Step for Viz Makeover</h2>
-<p>xxx xxx</p>
+<p>This section provides a step-by-step guide to recreate the redesgined visualization.</p>
+<p><strong>Step 1 - Download and Import Data</strong> <img src="step1.PNG"></p>
+<p>First, download the Resident Labour Force Participation Rate by Age and Sex, 2009 - 2019 (Table 5) file via <a href="https://stats.mom.gov.sg/Pages/Labour-Force-in-Singapore-2019-Labour-Force.aspx">this link</a>. Then, open Tableau Desktop to connect with the Excel file downloaded.</p>
+<p><strong>Step 2 - Data Preparation</strong> <img src="step2.PNG"></p>
+<p>Check on the “Cleaned with Data Interpreter” box for Tableau to assist with data cleaning (if desire, may click on underlined “Review the results” to see data tables created). Select the “T5_T A5:Y18” to extract relevant data. Hide the first column and switch Connection on the top right to “Extract” (as we will be saving onto Tableau Public, which does not support Live connections). Save the Data Extract.</p>
+<p><strong>Step 3 - Data Processing</strong> <img src="step5.PNG"></p>
+<p>Once the data are loaded, right-click on blank space under <em>Data</em> tab to select <em>“Create Calculated Field”</em>. Create a new field named “LFPR Change (%-pt)” with the formula “[2019]-[2009]” to create a field that tells us the change in percetage point of the LFPR for each age group from 2009 to 2019.</p>
+<p><strong>Step 4 - Simple Viz Set-up</strong> <img src="step6.PNG"></p>
+<p>To set up the simple visualization, drag-and-drop the <em>Age (Year)</em> variable into the Column field, and the (aggregated) <em>LFPR Change (%-pt)</em> that we have just created into the Rows field, as well as Label. and Color marks. A simple visualization resembling the final viz is created.</p>
+<p><strong>Step 5a - Editing Viz Color</strong> <img src="step7.PNG"></p>
+<p>As commented in Section B above, choosing appropriate color is important for a clear visualization - in this case, since we know there are positive and negative changes, we would want red to denote negative, and blue for positive to highlight the contrast. Double click on the Color legend tab, choose the Red-Blue Diverging palette, and check on the “Use Full Color Range” box.</p>
+<p><strong>Step 5b - Adding Informative Title and Subtitle</strong> <img src="step8.PNG"></p>
+<p>Similarly, informative title that informs viewer of the viz’s main message, as well as accurate subtitle to provide additional information about the data is critical for a good Viz. Double click on the title to edit as shown above (selecting font size 22 for title and size 12 for subtitle, while keeping the default font type; color of the title may also be changed to provide contrast)</p>
+<p><strong>Step 5c - Other Cosmetic Changes</strong> <img src="step12.png"></p>
+<p>We then hide the field labels for columns by right-clicking on the label and selecting the hide option, and also hide the color bar card by clicking on the triangle at the top-right-hand corner of the card and selecting “Hide Card”. Next, we right-click on the blank space on the viz and select “Format” to trigger the Format pane - on the Fields dropdown bar, select “SUM(LFPR Change (%-pt))”. Under Default, click on drop-down for Numbers, select “Number (Custom)” and change decimal places to “1” - this will change the percentage point changes to 1 decimal place. Under the same Default category, change the font size to 10, Similarly, switch the tab from “Pane” to “Axis” on the Format panel, and switch the default font to size 10 and Bold the font.</p>
+<p><strong>Step 5d - Alias for X-Axis</strong> <img src="step14.PNG"></p>
+<p>We may notice that the X-axis label has large spacing between the two fringe of age range - return to the Data Source Sheet, right-click on the age column, select “Edit Aliases” and proceed to remove spacing for all age bins. For the last bin, change to “70&amp;Older”.</p>
+<p><strong>Step 5e - Remove Total</strong> <img src="step15.png"></p>
+<p>Lastly, since Total does not provide meaningful information here, we right-click on it and select Exclude to exclude this data.</p>
+<p><strong>Step 6 - Basic Viz</strong> <img src="step17.PNG"></p>
+<p>That completes the set-up of the basic visualization. Remember to give the Worksheet a name and save the Tableau Workbook. Next, we will create a table that shows supporting data on LFRP for each age group in 2009 and 2019. This will provide more information for the visualization that will be useful when making observations.</p>
+<p><strong>Step 7a - Supporting Tables Set-Up</strong> <img src="step18.png"></p>
+<p>Create a new Tableau Worksheet. Drag-and-drop Age (Years) into the Columns field, aggregated 2009 and 2019 data points into the Text Mark (as shown above), click on “Show Me” on the top-right hand corner of the viz and select the Data Table Viz. Next, click on the “Swap Rows and Columns” button on the panel above (or press Ctrl+W)</p>
+<p><strong>Step 7b - Supporting Tables</strong> <img src="step20.png"></p>
+<p>As a final step for the supporting data table, exclude the Total column as shown above.</p>
+<p><strong>Step 8a - Dashboard Setup</strong> <img src="step21.png"></p>
+<p>To incorporate various layout elements, create a new Dashboard on Tableau. Drag-and-drop the first Worksheet and then stack the Table worksheet below. Hide the Field Labels for Columns and the Axis label for the table by right-clicking on them individually and selecting the respective hide options. On the Dashboard panel on the left, resize the Dashboard to fit automatically be selecting the “Automatic” option under Size dropdown menu.</p>
+<p><strong>Step 8b - Lead-In Paragraph</strong> <img src="Step25.PNG"></p>
+<p>Add a Tiled Text object (from the bottom left corner as shown above) by drag-and-dropping a text object above the main Viz worksheet (i.e. top of the dashboard viz). Include the write-up as shown to explains the visualization and enhance the readability by highlighting some key/obvious findings corresponding to the viz. </p>
+<p><strong>Step 8c - Axis Label for Supporting Table</strong> <img src="Step24.png"></p>
+<p>A good visualization should be clearly labeled - add in another text object to the left of the supporting data table at the bottom to inform viewer of the data being presented in the table, along with the unit of measure. Resize the text object and format it accordingly as shown.</p>
+<p><strong>Step 8d - Appropriate Spacing</strong> <img src="Step26.png"></p>
+<p>Appropriate spacing to indent different section of a viz enhances its overall readability - include Blank objects at appropriate space and readjust elements to create well-aligned viz. </p>
+<p><strong>Step 9a - Drawing Viewer’s Attention</strong> <img src="Step28.PNG"></p>
+<p>To accentuate the key message found in the lead-in paragraph, it might even help to conscientiously draw viewer’s attention to a particular segment of the viz. To achieve this, we first create a floating Vertical object and place it above the bars showing where the Senior age groups are.</p>
+<p><strong>Step 9b - Define Terms</strong> <img src="Step29.PNG"></p>
+<p>Making use of the space in the viz, we enhance the clarity further by providing the definition of “Senior”. In this case, we anchor a Tiled Text object with the definition “Senior (Aged 60 &amp; Older)” (which is in alignment with the Singapore’s Legal definition) onto the floating Vertical object.</p>
+<p><strong>Step 9c - Cosmetic Changes</strong> <img src="Step30.png"></p>
+<p>We then select the floating vertical object and under the triangle on the top right corner, select “Distribute Contents Evenly” and formate the layout of the object as shown above (select colour, and change opacity to 5%)</p>
+<p><strong>Step 9d - Cosmetic Changes II</strong> <img src="Step31.png"></p>
+<p>We further add on another line to create a visual divide for “Seniors vs the Rest”. This is done by creating another vertical object but with a width of 1px - formatting is as shown above.</p>
+<p><strong>Step 10 - Final Touch</strong> <img src="Step32.PNG"></p>
+<p>And finally, as we have floating objects which may be displaced when size of visualization changes, we revert the size of the visualization to a custom size fitting the resolution when the viz is created - in this case, 1,575px x 764px. This will also ensure the layout formatting will not have too drastic a change when the viz is uploaded onto Tableau Public.</p>
+<p><strong>Step 11 - Upload</strong> <img src="Step33.png"></p>
+<p>And for the very last step, we save the visualization onto Tableau Public.</p>
+<p><strong>Final Product available on Tableau Public</strong> <img src="Step34.PNG"></p>
+<p>Tada!</p>
 <h2 id="section-e-observations">Section E: Observations</h2>
 <ol type="1">
 <li></li>
