@@ -7,7 +7,7 @@ description: |
 author:
   - name: Jason Tey
     email: Jason.Tey.2020@mitb.smu.edu.sg
-date: 01-27-2021
+date: 01-28-2021
 output:
   distill::distill_article:
     toc: true
@@ -142,17 +142,22 @@ As commented in Section B above, choosing appropriate color is important for a c
 
 Similarly, informative title that informs viewer of the viz's main message, as well as accurate subtitle to provide additional information about the data is critical for a good Viz. Double click on the title to edit as shown above (selecting font size 22 for title and size 12 for subtitle, while keeping the default font type; color of the title may also be changed to provide contrast)
 
-**Step 5c - Other Cosmetic Changes**
+**Step 5c - Hiding Extra Elements**
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step10.PNG">
+
+We then hide the field labels for columns by right-clicking on the label and selecting the hide option, and also hide the color bar card by clicking on the triangle at the top-right-hand corner of the card and selecting "Hide Card" (as shown). 
+
+**Step 5d - Formatting Labels**
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step12.PNG">
 
-We then hide the field labels for columns by right-clicking on the label and selecting the hide option, and also hide the color bar card by clicking on the triangle at the top-right-hand corner of the card and selecting "Hide Card". Next, we right-click on the blank space on the viz and select "Format" to trigger the Format pane - on the Fields dropdown bar, select "SUM(LFPR Change (%-pt))". Under Default, click on drop-down for Numbers, select "Number (Custom)" and change decimal places to "1" - this will change the percentage point changes to 1 decimal place. Under the same Default category, change the font size to 10, Similarly, switch the tab from "Pane" to "Axis" on the Format panel, and switch the default font to size 10 and Bold the font. 
+Next, we right-click on the blank space on the viz and select "Format" to trigger the Format pane - on the Fields dropdown bar, select "SUM(LFPR Change (%-pt))". Under Default, click on drop-down for Numbers, select "Number (Custom)" and change decimal places to "1" - this will change the percentage point changes to 1 decimal place. Under the same Default category, change the font size to 10, Similarly, switch the tab from "Pane" to "Axis" on the Format panel, and switch the default font to size 10 and Bold the font. 
 
-**Step 5d - Alias for X-Axis**
+**Step 5e - Alias for X-Axis**
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step14.PNG">
 
 We may notice that the X-axis label has large spacing between the two fringe of age range - return to the Data Source Sheet, right-click on the age column, select "Edit Aliases" and proceed to remove spacing for all age bins. For the last bin, change to "70&Older". 
 
-**Step 5e - Remove Total**
+**Step 5f - Remove Total**
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step15.PNG">
 
 Lastly, since Total does not provide meaningful information here, we right-click on it and select Exclude to exclude this data. 
@@ -200,12 +205,12 @@ To accentuate the key message found in the lead-in paragraph, it might even help
 **Step 9b - Define Terms**
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step29.PNG">
 
-Making use of the space in the viz, we enhance the clarity further by providing the definition  of "Senior". In this case, we anchor a Tiled Text object with the definition "Senior (Aged 60 & Older)" (which is in alignment with the Singapore's Legal definition) onto the floating Vertical object. 
+Making use of the space in the viz, we enhance the clarity further by providing the definition  of "Senior". In this case, we anchor a Tiled Text object with the definition "Senior (Aged 60 & Older)" (which is in alignment with the Singapore's Legal definition) onto the floating Vertical object by drag-and-dropping a Text object onto the floating object while holding down the Shift key. 
 
 **Step 9c - Cosmetic Changes**
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step30.PNG">
 
-We then select the floating vertical object and under the triangle on the top right corner, select "Distribute Contents Evenly" and formate the layout of the object as shown above (select colour, and change opacity to 5%)
+We then select the floating vertical object and under the triangle on the top right corner, select "Distribute Contents Evenly" and format the layout of the object as shown above (select colour, and change opacity to 5%)
 
 **Step 9d - Cosmetic Changes II**
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step31.PNG">
