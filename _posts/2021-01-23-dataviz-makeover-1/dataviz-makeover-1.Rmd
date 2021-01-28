@@ -79,7 +79,7 @@ This section provides some suggested improvements that could be implemented to r
 | 7   | Lead-in Paragraph | Lead-in paragraph should be supported by the viz, and any figures quoted by the paragraph should be available and obvious from the viz. Better interpretation and processing of the data (e.g. calculating and presenting the difference, if that is the objective) would also enhance clarity of the viz.
 | 8   | Choice of Data | Using data on the Labour Force Participation Rate (LFPR) for each age group could provide clearer comparison to achieve the objective of the viz  |
 
-### Clarity 
+### Aesthetic 
 
 | S/N | Issues | Suggested Improvements                                                                            |
 |-----|-----|-------------------------------------------------------------------------------------|
@@ -235,7 +235,7 @@ And for the very last step, we save the visualization onto Tableau Public.
 **Final Product available on Tableau Public**
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-01-23-dataviz-makeover-1\step34.PNG"> 
 
-Tada! 
+[Tada!](https://public.tableau.com/profile/jason.tey#!/vizhome/DataVizMakeover1_16115150979860/VizMakeover1) 
 
 ## Section E: Observations 
 
