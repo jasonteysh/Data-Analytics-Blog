@@ -90,11 +90,9 @@ This section provides some suggested improvements that could be implemented to r
 | 13  | Alignment | As much as possible, to provide proper alignment within viz to reduce distraction caused by messiness |
 
 
-## Section C: Redesigned Visualization
-
-This section presents an alternative that improves on the original visualization based on the points discussed in Section A & B. 
-
 ### Makeover Concept
+
+Taking in the points discussed above, a redesigned visualization could look like the following: 
 
 ```{r, echo=F, fig.cap="Makeover Concept", fig.align='center',layout="1-body-outset"}
 knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1_concept.jpg")
@@ -102,9 +100,13 @@ knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Dat
 ```
 
 
-### Redesigned Viz
 
-The redesigned visualization can be accessed via [this link](https://public.tableau.com/profile/jason.tey#!/vizhome/DataVizMakeover1_16115150979860/VizMakeover1?publish=yes)
+## Section C: Redesigned Visualization
+
+Using Tableau, the redesigned visualization based on the discussion points and concept presented in Section B above is created as follows:-
+
+
+The redesigned visualization can also be accessed via [this link](https://public.tableau.com/profile/jason.tey#!/vizhome/DataVizMakeover1_16115150979860/VizMakeover1?publish=yes)
 
 ```{r, echo=F, fig.cap="Redeisgned Visualization", fig.align='center',layout="1-body-outset"}
 knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1.PNG")
