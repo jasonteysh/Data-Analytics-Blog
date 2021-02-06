@@ -46,3 +46,62 @@ This section provides a critique of the original visualization and comments on b
 | 2   | xxx | xxx |
 | 3   | xxx | xxx |
 
+### Aesthetic
+
+| S/N | Issue |Comments                                                                            |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1   | xxx | xxx |
+| 2   | xxx | xxx |
+| 3   | xxx | xxx |
+
+## Section B: Suggested Improvement
+
+This section provides some suggested improvements that could be implemented to resolve issues discussed in Section A. 
+
+### Clarity 
+
+| S/N | Issue | Suggested Improvements                                                             |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1   | xxx | xxx |
+| 2   | xxx | xxx |
+| 3   | xxx | xxx |
+
+### Aesthetic
+
+| S/N | Issue | Suggested Improvements                                                             |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1   | xxx | xxx |
+| 2   | xxx | xxx |
+| 3   | xxx | xxx |
+
+### Makeover Concept
+
+Taking in the points discussed above, a redesigned visualization could look like the following: 
+
+```{r, echo=F, fig.cap="Makeover Concept", fig.align='center',layout="1-body-outset"}
+#knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1_concept.jpg")
+
+```
+
+## Section C: Redesigned Visualization
+
+Using Tableau, the redesigned visualization based on the discussion points and concept presented in Section B above is created as follows:-
+
+
+The redesigned visualization can also be accessed via [this link](www.google.com)
+
+```{r, echo=F, fig.cap="Redeisgned Visualization", fig.align='center',layout="1-body-outset"}
+#knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1.PNG")
+
+```
+
+## Section D: Step-by-Step for Viz Makeover 
+
+This section provides a step-by-step guide to recreate the redesgined visualization. 
+
+**Step 1 - Download and Import Data**
+<img src="xxx">
+
+First, download the xxx file via [this link]www.google.com). Then, open Tableau Desktop to connect with the Excel file downloaded. 
+
+## Section E: Observations 
