@@ -1,0 +1,48 @@
+---
+title: "dataviz-makeover-2"
+description: |
+  This post presents a critical review, recommendations, and makeover of a visualization using data obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github
+  
+  This post constitutes part of the assessment for credit towards the Singapore Management Univerisity module ISSS608 Visual Analytics and Application, AY2020/2021 Term 2. 
+  
+  Final redesigned visualization can be found on this link: 
+  
+author:
+  - name: Jason Tey
+    email: Jason.Tey.2020@mitb.smu.edu.sg
+date: 02-06-2021
+output:
+  distill::distill_article:
+    toc: true
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The original  xxx
+
+```{r, echo=F, fig.cap="Original Visualization by MOM, Singapore", fig.align='center',layout="1-body-outset", border="2px solid black"}
+#knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1original.PNG")
+
+```
+
+## Section A: Critique of Original Viz 
+
+This section provides a critique of the original visualization and comments on both clarity and aesthetic aspects that could be further improved on. A total of 8 clarity issues and 5 aesthetic issues (as shown below) were identified. 
+
+```{r, echo=F, fig.cap="Critique on Original Visualization", fig.align='center',layout="1-body-outset"}
+#knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1issues.PNG")
+
+```
+
+### Clarity
+
+| S/N | Issue |Comments                                                                            |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1   | xxx | xxx |
+| 2   | xxx | xxx |
+| 3   | xxx | xxx |
+

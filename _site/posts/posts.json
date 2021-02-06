@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-02-06-dataviz-makeover-2/",
+    "title": "dataviz-makeover-2",
+    "description": "This post presents a critical review, recommendations, and makeover of a visualization using data obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github\n\nThis post constitutes part of the assessment for credit towards the Singapore Management Univerisity module ISSS608 Visual Analytics and Application, AY2020/2021 Term 2. \n\nFinal redesigned visualization can be found on this link:",
+    "author": [
+      {
+        "name": "Jason Tey",
+        "url": {}
+      }
+    ],
+    "date": "2021-02-06",
+    "categories": [],
+    "contents": "\r\n\r\nContents\r\nSection A: Critique of Original Viz\r\nClarity\r\n\r\n\r\nThe original xxx\r\n\r\n\r\n\r\nSection A: Critique of Original Viz\r\nThis section provides a critique of the original visualization and comments on both clarity and aesthetic aspects that could be further improved on. A total of 8 clarity issues and 5 aesthetic issues (as shown below) were identified.\r\n\r\n\r\n\r\nClarity\r\nS/N\r\nIssue\r\nComments\r\n1\r\nxxx\r\nxxx\r\n2\r\nxxx\r\nxxx\r\n3\r\nxxx\r\nxxx\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-02-06T17:03:32+08:00",
+    "input_file": "dataviz-makeover-2.utf8.md"
+  },
+  {
     "path": "posts/2021-01-23-dataviz-makeover-1/",
     "title": "ISSS608 DataViz Makeover 1",
     "description": "This post presents a critical review, recommendations, and makeover of a visualization found in MOM's \"_Report: Labour Force in Singapore 2019_\". \n\nThis post constitutes part of the assessment for credit towards the Singapore Management Univerisity module ISSS608 Visual Analytics and Application, AY2020/2021 Term 2. \n\nFinal redesigned visualization can be found on this link: https://public.tableau.com/profile/jason.tey#!/vizhome/DataVizMakeover1_16115150979860/VizMakeover1",
