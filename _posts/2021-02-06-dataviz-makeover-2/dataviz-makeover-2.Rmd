@@ -99,11 +99,178 @@ The redesigned visualization can also be accessed via [this link](www.google.com
 
 This section provides a step-by-step guide to recreate the redesgined visualization. 
 
-**Step 1 - Download and Import Data**
-<img src="xxx">
+### Part 1 - Data Preparation
 
-First, download the xxx file via [this link]www.google.com). Then, open Tableau Desktop to connect with the Excel file downloaded. 
+**Step 1.1 - Download and Import Data**
+
+First, download the data files used via this [link](https://github.com/YouGov-Data/covid-19-tracker) to the Imperial College London YouGov Covid-19 Behaviour Tracker Data Hub. 
+
+As the data files are separated by the various countries for which the surveys are conducted, with some being zipped up in zip folders, we will next need to unzip these files. For the ease of data retrieval later on, we will store all the country files to be used in one common folder.
+
+Thereafter, open Tableau Prep Builder to prepare for the data wrangling process.
+
+**Step 1.2 - Importing Mulitple CSV files**
+
+Drag-and-Drop and of the country file to be used onto the home page of Tableau Prep Builder. Under the 'Input' panel, select 'Muiltple Files', click on 'Wildcard union', then search in the folder where all the country files to be used are stored. Click 'Apply' 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\step3.PNG">
+
+**Step 1.3 - Filtering Relevant Data**
+
+Once all the datasets are joined, uncheck all fields then check on the box of the following relevant fields to select them for retention: 
+
+- Vac_1, vac2_1, vac2_2, vac2_3, vac2_6, vac_3
+- endtime
+- gender
+- age
+- employment_status, employment_status_1 through employment_status_7
+- household_size, household_children
+- File paths
+
+Once that has been applied, we next filter the data to focus on records from year 2021: click on the 'Filter Value' tab, and input the following calculation, then click Apply and Save
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\step5.PNG">
+
+**Step 1.4 - Data Issue: Pivoted Employment Fields**
+
+There are numerous data issue with the employment_status fields. Most obviously, Nordic countries Sweden, Denmark, Norway and Finland actually pivoted the employment_status field to form 7 different columns for each of the responses. The real problem, however, is that there are overlaps in positive responses to the 7 columns (i.e. they are not mutually exclusive - respondents could answer "Yes" to multiple employment status). 
+
+To resolve this issue, priority has to be devised to accord one prevailing status for rows with multiple Yes's to the employment status. In this visualization, full-time employment will take precedence over any other status (i.e. if a respondent answers Yes to full-time employment, he/she will be recorded as having full-time employment under a recoded employment status column). Next piority, in order, will be for full-time student, then part-time employment (other status has no overlaps). The above logical recoding of the employment status field can be achieved by creating the following calculated field:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step6.PNG">
+
+**Step 1.5 - Renaming Fields and Values**
+
+Next, we rename the File Path variable to 'Countries', remove the '.csv' at the end of each entry, then capitalize the country name.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step10.PNG">
+
+For the Household Size and Household Children fields, we regroup all categories 8 and above as '8 or More'. 'Don't know' and 'Prefer not to say' entries are recoded as null. 
+
+**Step 1.6 - Output Data**
+
+Finally, include an Output node on the Prep Building flow
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Overview.PNG">
+
+Output the cleaned data as a csv file back to the folder where the datasets were stored, with the following options:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step14.PNG">
+
+### Part 2 - Creating Divergent Stacked Bar
+
+**Step 2.1 - Importing Data & Assigning Variable Types**
+
+First, open Tableau then import the merged and cleaned dataset by drag-and-dropping it onto the main page. 
+
+Tableau automatically assigns variables with integer values as Measures - this is not accurate for our survey response variables where 1 represents 'Strongly Agree' and 5 'Strongly Disagree'. Hence, we shift these vac_x variables from the Measures section to the Dimension section
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step1.PNG">
+
+**Step 2.2 - Creating Variables for Stacked Bar** 
+
+We start by assigning 1 to all entry and call it 'No. Record' - this will come in handy when we calculate the survey entries
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step2.PNG">
+
+Next, we sum up the records by country - note: we would typically get the total sum (which would sum up the records across the table), but for the purpose of our viz, we will hold country fixed
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step3_.PNG">
+
+We will need a Parameter to toggle between the different questions we have included in the viz, soliciting user to select a question of interest:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step4.PNG">
+
+The Parameter will then need to be "activated" to trigger response to the viz, using the CASE function in a new calculated field
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step5.PNG">
+
+Next, we want to survey responses which are more than 2 (neutral, disagree, strongly disagree) to bear a weight of 1 for a variable called 'Count Negative' - this will allow these responses to start from left of the middle origin y-axis divider later.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step6.PNG">
+
+Sum up this variable across the table in the variable 'Total Count Negative'
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step7.PNG">
+
+Next, we need the percentage of responses that selected each response foe the selected question (Strongly Agree, Agree, etc.), out of the total record
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step8.PNG">
+
+And because the divergent bars are ultimately a Gnatt chart, we will need a variable to tell the individual response value where to start - by dividing the Total Count Negative by the sum of Total Count (with a negative in front), we will be able to identify where the values bigger than 2 (i.e. neutral, disagree, strongly disagree) will start from the left of the y-axis.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step9.PNG">
+
+The final variable to create for the basic stacked bars is a little more tricky - we need a variable to tell us how long the bar for each response should be when stacked together. We first find where the bar starts, then add the percentage of the next row, skipping null values (note: up to this step, Tableau will compute this across table, later on we will specify for it to compute using each responded value, together with Gnatt Start, it will then start where the previous response value ends, then add all entries with that response value together, then restart for each response value)
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step10.PNG">
+
+**Step 2.3 - Divergent Stacked Bar** 
+
+Now we put everything together. We drag-and-drop Countries to Rows, Gnatt Percent to Columns, change the chart type to Gnatt Bar, drop Question Selected to Colour and another one to Detail, and finally Percentage to Size 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step11.PNG">
+
+Thereafter, we go to the little triangle on the green Gnatt Percent pill, 'Compute Using' option, and select 'Question Selected'. Do the same for the green Percentage pill under Size. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step12.PNG">
+
+Under Colour, click on 'Edit Colors...', select dark blue for 1, light blue for 2, muted neutral color for 3, light pink for 4, and bright red for 5. Right-click on the Question Selected blue pill under colour, and select 'Sort'. Under 'Sort By', choose Manual, and arrange then in 3>4>5>1>2 order (based on conclusion from *Section B*)
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step14.PNG">
+
+And there, a basic Divergent Stacked Bar is created! One last touch - to change the negative percentage on the left of Y-axis to positive. Right-click on the X-axis, select Format, under Scale, Numbers, choose 'Custom' and type '0%;0%' as the format
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step17.PNG">
 
 
+**Step 2.4 - Sort Viz** 
+
+We want to create a sorting variable (which will also be used in the following portion of our viz) - 'Pro Percent' - to calculate percentage of respondents who provided positive response to the questions asked (i.e. either Strongly Agree or Agree). But first, we need to sum up all the positive responses with a new 'Value' field
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step1.PNG">
+
+Then divide this value by the number of records to get the percentage of positive responses 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step2.PNG">
+
+And finally, we can go back to the Country under Rows, right-click and select 'Sort', select 'Field' under 'Sort By', Descending order, 'Pro Percent' under Field Name, and leave Custom as the Aggregation. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step14.PNG">
+
+
+### Part 3 - Creating Bar Chart to Include as ToolTip
+
+**Step 3.1 - Creating Bar Chart** 
+
+First, create a new Worksheet on Tableau. Before we do anything further, we create a new variable - 'Ranked Response' - to transform the 1-5 code into actual description of the response (e.g. Strongly Agree etc.)
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step23.PNG">
+
+Next, at the new Worksheet, we drag-and-drop No. Record onto Columns, and Ranked Response onto Rows and Color box, then Percentage into Label box. Change the color of the viz using the 'Pick Screen Color' option to ensure consistency
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step27.PNG">
+
+**Step 3.2 - ToopTip linking sheets** 
+
+We head back to the Divergent Stacked Bar sheet, and input the following into ToolTip
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step28.PNG">
+
+However, we notice that the Ranked Response does not change color when we hover over each of the different ranked responses. Hence, we create another 5 separate variable to create to color changing effect 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step29.PNG">
+
+The above uses Strongly Agree as an example, the process is repeated to create 4 other variables for the four other response value. Next, put all 5 newly created variable into ToolTip
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step30.PNG">
+
+Finally, edit the ToolTip as follows:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step31.PNG">
+
+And the complete Stacked Bar Chart with informative summary and ToolTip showing overall survey response from the country is created!
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step32.PNG">
 
 ## Section E: Observations 
