@@ -111,9 +111,9 @@ Thereafter, open Tableau Prep Builder to prepare for the data wrangling process.
 
 **Step 1.2 - Importing Mulitple CSV files**
 
-Drag-and-Drop and of the country file to be used onto the home page of Tableau Prep Builder. Under the 'Input' panel, select 'Muiltple Files', click on 'Wildcard union', then search in the folder where all the country files to be used are stored. Click 'Apply' 
+Drag-and-Drop one of the country file to be used onto the home page of Tableau Prep Builder. Under the 'Input' panel, select 'Muiltple Files', click on 'Wildcard union', then search in the folder where all the country files to be used are stored. Click 'Apply' 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\step3.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\step3.PNG"  style="width:70%; display:block; margin:0 auto;">
 
 **Step 1.3 - Filtering Relevant Data**
 
@@ -137,13 +137,13 @@ There are numerous data issue with the employment_status fields. Most obviously,
 
 To resolve this issue, priority has to be devised to accord one prevailing status for rows with multiple Yes's to the employment status. In this visualization, full-time employment will take precedence over any other status (i.e. if a respondent answers Yes to full-time employment, he/she will be recorded as having full-time employment under a recoded employment status column). Next piority, in order, will be for full-time student, then part-time employment (other status has no overlaps). The above logical recoding of the employment status field can be achieved by creating the following calculated field:
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step6.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step6.PNG" style="width:70%; display:block; margin:0 auto;">
 
 **Step 1.5 - Renaming Fields and Values**
 
 Next, we rename the File Path variable to 'Countries', remove the '.csv' at the end of each entry, then capitalize the country name.
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step10.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step10.PNG" style="width:80%; display:block; margin:0 auto;">
 
 For the Household Size and Household Children fields, we regroup all categories 8 and above as '8 or More'. 'Don't know' and 'Prefer not to say' entries are recoded as null. 
 
@@ -155,7 +155,7 @@ Finally, include an Output node on the Prep Building flow
 
 Output the cleaned data as a csv file back to the folder where the datasets were stored, with the following options:
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step14.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Prep Builder CLean\Step14.PNG" style="width:60%; display:block; margin:0 auto;">
 
 ### Part 2 - Creating Divergent Stacked Bar
 
@@ -165,17 +165,17 @@ First, open Tableau then import the merged and cleaned dataset by drag-and-dropp
 
 Tableau automatically assigns variables with integer values as Measures - this is not accurate for our survey response variables where 1 represents 'Strongly Agree' and 5 'Strongly Disagree'. Hence, we shift these vac_x variables from the Measures section to the Dimension section
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step1.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step1.PNG" style="width:60%; display:block; margin:0 auto;">
 
 **Step 2.2 - Creating Variables for Stacked Bar** 
 
 We start by assigning 1 to all entry and call it 'No. Record' - this will come in handy when we calculate the survey entries
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step2.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step2.PNG" style="width:70%; display:block; margin:0 auto;">
 
 Next, we sum up the records by country - note: we would typically get the total sum (which would sum up the records across the table), but for the purpose of our viz, we will hold country fixed
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step3_.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step3_.PNG" style="width:90%; display:block; margin:0 auto;">
 
 We will need a Parameter to toggle between the different questions we have included in the viz, soliciting user to select a question of interest:
 
@@ -183,15 +183,15 @@ We will need a Parameter to toggle between the different questions we have inclu
 
 The Parameter will then need to be "activated" to trigger response to the viz, using the CASE function in a new calculated field
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step5.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step5.PNG" style="width:70%; display:block; margin:0 auto;">
 
 Next, we want to survey responses which are more than 2 (neutral, disagree, strongly disagree) to bear a weight of 1 for a variable called 'Count Negative' - this will allow these responses to start from left of the middle origin y-axis divider later.
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step6.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step6.PNG" style="width:90%; display:block; margin:0 auto;">
 
 Sum up this variable across the table in the variable 'Total Count Negative'
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step7.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step7.PNG" style="width:90%; display:block; margin:0 auto;">
 
 Next, we need the percentage of responses that selected each response foe the selected question (Strongly Agree, Agree, etc.), out of the total record
 
@@ -221,18 +221,18 @@ Under Colour, click on 'Edit Colors...', select dark blue for 1, light blue for 
 
 And there, a basic Divergent Stacked Bar is created! One last touch - to change the negative percentage on the left of Y-axis to positive. Right-click on the X-axis, select Format, under Scale, Numbers, choose 'Custom' and type '0%;0%' as the format
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step17.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step17.PNG" style="width:80%; display:block; margin:0 auto;">
 
 
 **Step 2.4 - Sort Viz** 
 
 We want to create a sorting variable (which will also be used in the following portion of our viz) - 'Pro Percent' - to calculate percentage of respondents who provided positive response to the questions asked (i.e. either Strongly Agree or Agree). But first, we need to sum up all the positive responses with a new 'Value' field
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step1.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step1.PNG" style="width:90%; display:block; margin:0 auto;">
 
 Then divide this value by the number of records to get the percentage of positive responses 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step2.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step2.PNG" style="width:90%; display:block; margin:0 auto;">
 
 And finally, we can go back to the Country under Rows, right-click and select 'Sort', select 'Field' under 'Sort By', Descending order, 'Pro Percent' under Field Name, and leave Custom as the Aggregation. 
 
@@ -245,7 +245,7 @@ And finally, we can go back to the Country under Rows, right-click and select 'S
 
 First, create a new Worksheet on Tableau. Before we do anything further, we create a new variable - 'Ranked Response' - to transform the 1-5 code into actual description of the response (e.g. Strongly Agree etc.)
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step23.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step23.PNG" style="width:90%; display:block; margin:0 auto;">
 
 Next, at the new Worksheet, we drag-and-drop No. Record onto Columns, and Ranked Response onto Rows and Color box, then Percentage into Label box. Change the color of the viz using the 'Pick Screen Color' option to ensure consistency
 
@@ -259,11 +259,11 @@ We head back to the Divergent Stacked Bar sheet, and input the following into To
 
 However, we notice that the Ranked Response does not change color when we hover over each of the different ranked responses. Hence, we create another 5 separate variable to create to color changing effect 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step29.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step29.PNG" style="width:80%; display:block; margin:0 auto;">
 
 The above uses Strongly Agree as an example, the process is repeated to create 4 other variables for the four other response value. Next, put all 5 newly created variable into ToolTip
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step30.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step30.PNG" style="width:30%; display:block; margin:0 auto;">
 
 Finally, edit the ToolTip as follows:
 
@@ -272,5 +272,99 @@ Finally, edit the ToolTip as follows:
 And the complete Stacked Bar Chart with informative summary and ToolTip showing overall survey response from the country is created!
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step32.PNG">
+
+### Part 4 - Visualizing Uncertainty
+
+**Step 4.1 - Creating Variables Required** 
+
+We have created two important variables earlier (Value and Pro Percent). Next, we will need a few more variables that measure uncertainty. Starting with the Standard Error
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step3.PNG" style="width:90%; display:block; margin:0 auto;">
+
+Z-scores
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step4a.PNG" style="width:30%; display:block; margin:0 auto;"><img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step4b.PNG" style="width:30%; display:block; margin:0 auto;">
+
+Error Margins
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step5a.PNG" style="width:40%; display:block; margin:0 auto;"> <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step5b.PNG" style="width:40%; display:block; margin:0 auto;">
+
+95% Bounds
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step6c.PNG" style="width:40%; display:block; margin:0 auto;"> <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step6a.PNG" style="width:40%; display:block; margin:0 auto;">
+
+99% Bounds
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step6d.PNG" style="width:40%; display:block; margin:0 auto;"> <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step6b.PNG" style="width:40%; display:block; margin:0 auto;">
+
+Confidence Intervals
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step6e.PNG" style="width:40%; display:block; margin:0 auto;"> <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step6f.PNG" style="width:40%; display:block; margin:0 auto;">
+
+A Parameter to allow toggling between 95% and 99% CI
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step7.PNG" style="width:80%; display:block; margin:0 auto;">
+
+Upper and Lower Bound based on Parameter input
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step7a.PNG" style="width:40%; display:block; margin:0 auto;"> <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step7b.PNG" style="width:40%; display:block; margin:0 auto;">
+
+And one final variable to display as marginal value for the upper and lower confidence interval
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step15d.PNG" style="width:40%; display:block; margin:0 auto;"> 
+
+**Step 4.2 - Creating Basic Uncertainty Viz** 
+
+First, drag-and-drop Countries onto Rows and Pro Percent onto Column
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step8.PNG"> 
+
+Next, drag-and-drop Measure Values onto Columns; a list of variables will appear on the Measure Value panel to the left of the viz, remove all except 'AGG(Upper CI Selected)' and 'AGG(Lower CI Selected)'. On the Measure Value green pill under Columns, right-click and select Dual Axis, 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step9.PNG">
+
+On the Measure Values tab under the Marks panel, select Line as the chart type, then drag-and-drop the blue Measure Names pill under Detail to Path. Click on Color to change it to a grey color to distinguish from the dotted mean, and reduce the size of the lines.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step10.PNG"> 
+
+Right-click on the top Axis to select Synchronize Axis, then uncheck Show Header to turn it off.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step11.PNG"> 
+
+Sort the Y-axis by descending Pro Percent (as with earlier Divergent Stacked Bar viz)
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step14.PNG"  style="width:60%; display:block; margin:0 auto;"> 
+
+On the AGG(Pro Percent) tab under the Marks panel, drag-and-drop Pro Percent to Label; edit the labels to a smaller font (6pt) and ensure the format is Percentage (no decimal point). Similarly, X-axis should also be in Percentage format. Right click on the X-axis and select 'Move marks to front' if not already at the front. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step12.PNG"> 
+
+Select Entire View on the view option. Drag-and-drop both the 'CI %-pt (+/-)' and 'No. Record' variable onto Rows, then click on both the pills to change them from Continuous to Discrete. Format the 'CI %-pt (+/-)' rows to retain 4 decimal points. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step15a.PNG"> 
+
+Edit the sizes of the data information, reduce data ink, and change the axis title. And theere we have our basic uncertainty viz
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step15e.PNG"> 
+
+**Step 4.3 - ToolTip** 
+
+We include a ToolTip to summarise the data points when hovered over
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step23.PNG" style="width:60%; display:block; margin:0 auto;"> 
+
+**Step 4.4 - Filters** 
+
+Before we put everything together, let's create one more filter - Age Group
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step19.PNG" style="width:50%; display:block; margin:0 auto;"> 
+
+We then drag-and-drop Gender, Age Group, Employment Status, Household Size, and Household Children onto the Filter panel, show all the filters. To save space, we will change Gender to single value drop-down, while the rest of the filters to multiple-values drop-down. Find the two Parameters on the Parameters panel on the bottom-left, and show both the Select Question and CI parameters as well. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step20.PNG" style="width:50%; display:block; margin:0 auto;"> 
+
+For each of the filter, we click on the small triangle beside them, go to 'Apply to Worksheet', select 'Selected Worksheet' and check the box beside 'Divergent Stacked Bar' sheet. 
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step21.PNG" style="width:50%; display:block; margin:0 auto;"> 
+
+And there we have it, the final Visualization for Uncertainty with informative ToolTip. While the lines for the standard error margins are small in this version, it will be more obvious when we explore sub-population of each country by filtering down the dataset, which will lead to smaller number of records being available. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step24.PNG"> 
+
+### Part 5 - Interactive Dashboard
+
+**Step 5.1 - Basic Dashboard** 
+
 
 ## Section E: Observations 
