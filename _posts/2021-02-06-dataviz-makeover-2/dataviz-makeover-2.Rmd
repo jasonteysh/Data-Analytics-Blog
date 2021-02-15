@@ -10,7 +10,7 @@ description: |
 author:
   - name: Jason Tey
     email: Jason.Tey.2020@mitb.smu.edu.sg
-date: 02-06-2021
+date: 02-15-2021
 output:
   distill::distill_article:
     toc: true
@@ -22,10 +22,10 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-The original  xxx
+The original visualization made use of data from the Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github, and is appended below:
 
 ```{r, echo=F, fig.cap="Original Visualization by MOM, Singapore", fig.align='center',layout="1-body-outset", border="2px solid black"}
-#knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1original.PNG")
+#knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-02-06-dataviz-makeover-2/Media/Original.PNG")
 
 ```
 
@@ -42,17 +42,29 @@ This section provides a critique of the original visualization and comments on b
 
 | S/N | Issue |Comments                                                                            |
 |-----|-------|------------------------------------------------------------------------------------|
-| 1   | xxx | xxx |
-| 2   | xxx | xxx |
-| 3   | xxx | xxx |
+| 1   |  Title of 100% Bar Chart | Title asked a question with no obvious answer provided from the visualization - at a first glance, this title created more questions than answer - after looking at the viz, we are still unclear which country is more "pro-vaccine". This is partly due to issue S/n 2 and S/n 3 discussed below. |
+| 2   | Order of Country for 100% Bar Chart  | The main drawback of the visualization is the lack of meaningful sort (which is presented in an alphabetical order). In this case, viewers will need to visually seek out the country with the longest blue bar in order to make meaningful deduction (assuming only the blue bars are of interest to the viz-maker - which leads to the next issue)|
+| 3   | Lack of Proper Definition for Responses | While the titular question asked which country is more pro-vaccination, there is no clear indication of which color segment constitutes the "pro-vaccine" population (i.e. should we count the orange bar? What about the red bar?). This is related to Issue 6 below|
+| 4   | Missing Survey Question | This is another major flaw of the visualization - there is no way of knowing what was the question that respondents strongly agree or disagree to even if we know what each color is referring to. |
+| 5   | Ambiguous Unit of Measure | "% of Total Record" does not sufficiently explain what the base of the "%" is, and what constitutes the "Total Record"  |
+| 6   | Incomplete Information on Colors Presented | The legend does not give any description for the values 2 (orange), 3 (red), and 4 (light blue). It does not clearly reflect that the segments are ordinal (i.e. in order of any significance) and hence muddy the interpretation of the viz. (see Issue *X* in Aesthetic segment below) |
+| 7   |  Meaningless Headers in Legend | Similar to Issue 4 above, "Vac 1" does not explain what question the response was for and is as meaningless as putting any random symbol |
+| 8   | Redundancy of the Bar Chart on the Right | After diving deeper into the viz, it not difficult to realize that the right-hand viz is a repetition of the blue bars in the left-hand viz (except it is sorted by length of the blue bar) |
+| 9   | Misleading Viz Without Uncertainty  | As a survey response, it is unclear how certain the visualizer is in the data (in the sense of statistical certainty)  - it would be more helpful if the viz is presented with the error margins for various confidence interval presented |
+| 10  | Missing Sample Size Info | In similar vein to the issue above, It is not clear if all the country has equal number of respondents, which could present a biased viz using percentage information. |
 
 ### Aesthetic
 
 | S/N | Issue |Comments                                                                            |
 |-----|-------|------------------------------------------------------------------------------------|
-| 1   | xxx | xxx |
-| 2   | xxx | xxx |
-| 3   | xxx | xxx |
+| 1   | No Clear Color Transition | Color chosen for the ordinal scale is arbitrary and does not show any reflect any meaningful representation of the response scale, nor do they aid in answering the titular question. In fact there is even a repetition of blue (dark for 1, light for 4) for responses that are very different |
+| 2   | Placement of Legend | While the legend is applicable for both charts, it is more applicable for the visualization on the right. However, the placement of it on the right panel of the viz requires viewers to glaze across the right-hand viz to extract information (however limited it is) from the land-hand viz to the legend |
+| 3   | Inconsistent Order | While both the left- and right-hand viz are sending similar message, the fact that they are sorted differently makes them aesthethically irritable (and no less confusing - as covered in S/n 2 in Clarity section above) |
+| 4   | Choice of Viz | Using bar chart to depict percentage of population that strongly agree to vaccination takes up unnecessary data ink (in addition to being inefficient in depicting accurate info with uncertainty - as discussed in S/n 9 in Clarity section) |
+| 5   | Sloppy text | Using '%' instead of spelling percentage out makes the viz unprofessional and reeks of sloppiness |
+| 6   | Improper Spelling of Proper Noun | The issue above is exacerbated by the fact that country names are spelled without capitalizing the initial letter, as with the norm for proper nouns |
+| 7   | Typo Error | Furthermore, spelling mistakes ("vacinne") were spotted in the most obvious location - the title|
+| 8   | Inconsistent Decimal Placing | The two visualizations also bore differing decimal points for the common X-axis |
 
 ## Section B: Suggested Improvement
 
@@ -74,7 +86,13 @@ This section provides some suggested improvements that could be implemented to r
 | 2   | xxx | xxx |
 | 3   | xxx | xxx |
 
+
+### Discussion on Likert Scale Visualization
+
+### Discussion on Visualization of Uncertainty
+
 ### Makeover Concept
+
 
 Taking in the points discussed above, a redesigned visualization could look like the following: 
 
