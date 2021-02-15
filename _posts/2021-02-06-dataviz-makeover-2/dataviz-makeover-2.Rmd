@@ -247,13 +247,13 @@ First, create a new Worksheet on Tableau. Before we do anything further, we crea
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step23.PNG" style="width:90%; display:block; margin:0 auto;">
 
-Next, at the new Worksheet, we drag-and-drop No. Record onto Columns, and Ranked Response onto Rows and Color box, then Percentage into Label box. Change the color of the viz using the 'Pick Screen Color' option to ensure consistency
+Next, at the new Worksheet, we drag-and-drop No. Record onto Columns, and Ranked Response onto Rows and Color box, then Percentage into Label box. Change the color of the viz using the 'Pick Screen Color' option to ensure consistency. Manually sort the order of the Y-axis to start from Strongly Agree to Strongly Disagree. 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step27.PNG">
 
 **Step 3.2 - ToopTip linking sheets** 
 
-We head back to the Divergent Stacked Bar sheet, and input the following into ToolTip
+We head back to the Divergent Stacked Bar sheet. We create one variable Percentage Response that multiplies 100 to the variable Percentage. Include this new variable, together with Ranked Response into ToolTop box, and input the following into ToolTip
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Divergent\Step28.PNG">
 
@@ -366,5 +366,30 @@ And there we have it, the final Visualization for Uncertainty with informative T
 
 **Step 5.1 - Basic Dashboard** 
 
+Putting them altogether is easy: first, drag-and-drop both the Worksheets onto an empty Dashboard, the parameters/filters will be automatically attached.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Step1.PNG">
+
+Next, reconfigure the parameters and filters to go to the top of the page by shifting them around. Lastly, add in a Text Tiled object in between the parameters and filters to input the title.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Step0.PNG">
+
+**Step 5.2 - Final Dashboard with Action** 
+
+Final step for this visualization is to add actions: go to the Dashboard tab on the top, click on 'Actions...'. Click on Add Action, then Highlight, and connect both sheets on the Dashboard with both sheets, running action on select. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Step3.PNG">
+
+And there we have it - the final dashboard! 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Final.PNG">
+
+**Step 5.3 - Upload**
+
+And once all is done, we upload the viz onto Tableau Public
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Step5.PNG">
+
+This Visualization is made available on Tableau Public via this [link](https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard?publish=yes)
 
 ## Section E: Observations 
