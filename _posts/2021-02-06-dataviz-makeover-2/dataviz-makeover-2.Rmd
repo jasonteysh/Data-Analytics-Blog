@@ -1,11 +1,13 @@
 ---
-title: "dataviz-makeover-2"
+title: "ISSS608 DataViz Makeover 2"
 description: |
   This post presents a critical review, recommendations, and makeover of a visualization using data obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github
   
   This post constitutes part of the assessment for credit towards the Singapore Management Univerisity module ISSS608 Visual Analytics and Application, AY2020/2021 Term 2. 
   
   Final redesigned visualization can be found on this link: 
+  
+  https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard
   
 author:
   - name: Jason Tey
@@ -150,17 +152,16 @@ Wexler concurred with Sönning’s views in his [paper](https://fis.uni-bamberg.
 
 Taking in the points discussed above, a redesigned visualization could look like the following: 
 
-```{r, echo=F, fig.cap="Makeover Concept", fig.align='center',layout="1-body-outset"}
-#knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1_concept.jpg")
-
-```
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Concept.PNG">
 
 ## Section C: Redesigned Visualization
 
-Using Tableau, the redesigned visualization based on the discussion points and concept presented in Section B above is created as follows:-
+Using Tableau, the redesigned visualization based on the discussion points and concept presented in Section B above is created as follows:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Finalv17Feb.PNG">
 
 
-The redesigned visualization can also be accessed via [this link](www.google.com)
+The redesigned visualization can also be accessed via [this link](https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard)
 
 ```{r, echo=F, fig.cap="Redeisgned Visualization", fig.align='center',layout="1-body-outset"}
 #knitr::include_graphics("C:/ISSS608 Visualization Analytics/DataViz Makeover/Data Analytics Blog/_posts/2021-01-23-dataviz-makeover-1/makeover1.PNG")
@@ -454,7 +455,7 @@ Final step for this visualization is to add actions: go to the Dashboard tab on 
 
 And there we have it - the final dashboard! 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Final.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Finalv17Feb.PNG">
 
 **Step 5.3 - Upload**
 
