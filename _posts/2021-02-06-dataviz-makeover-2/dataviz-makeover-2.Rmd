@@ -463,9 +463,15 @@ Next, edit the **sizes of the data information** (by right-clicking the relevant
 
 **Step 4.3 - ToolTip** 
 
-We include a **ToolTip** to summarize the data points when hovered over
+We include a ToolTip to summarize the data points when hovered over. Before that, we create an extra variable showing the country's mean percentage who responded positively to the selected question - "**Country Pro Percent**" - this will come in useful when we add on filters to allow toggling into sub-populations (see next step). With this Country Pro Percent, we would then be able to compare the sub-population's positive response rate vis-a-vis the country's average. 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step23.PNG" style="width:60%; display:block; margin:0 auto;"> 
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step23a.PNG" style="width:60%; display:block; margin:0 auto;"> 
+
+Finally, we add on the **ToolTip** by clicking on the ToolTip box, where an editing box will pop up, and input as shown below
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step23b.PNG" style="width:60%; display:block; margin:0 auto;"> 
+
+
 
 **Step 4.4 - Filters** 
 
@@ -482,7 +488,7 @@ For each of the filter, we click on the small triangle beside them, go to **'App
 
 And there we have it, the final **Visualization for Uncertainty with informative ToolTip**. While the lines for the standard error margins are small in this version, it will be more obvious when we explore sub-population of each country by filtering down the dataset, which will lead to smaller number of records being available. 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\Step24.PNG"> 
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Uncertainty\FinalUncertainty.PNG"> 
 
 ### Part 5 - Interactive Dashboard
 
