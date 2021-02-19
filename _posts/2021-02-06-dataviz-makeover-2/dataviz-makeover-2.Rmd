@@ -12,7 +12,7 @@ description: |
 author:
   - name: Jason Tey
     email: Jason.Tey.2020@mitb.smu.edu.sg
-date: 02-15-2021
+date: 02-19-2021
 output:
   distill::distill_article:
     toc: true
@@ -154,7 +154,7 @@ Wexler concurred with Sönning’s views in his [paper](https://fis.uni-bamberg.
 
 Taking in the points discussed above, a redesigned visualization could look like the following: 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Tableau - Dashboard\Concept.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Concept.jpg">
 
 #### Addressing Clarity Issue
 
@@ -174,7 +174,7 @@ Taking in the points discussed above, a redesigned visualization could look like
 
 #### Addressing Aethetic Issue
 
-| S/N | Issue | Suggested Improvements                                                             |
+| S/N | Issue | Ways in which proposed viz resolve issues identified                                                             |
 |-----|-------|------------------------------------------------------------------------------------|
 | 1   | No Clear Color Transition | Proper color transition and contrasts are incorporated to emphasize the distinction between those who are "pro" and those who are not, as well as to provide greater focus on stronger opinions.  |
 | 2   | Placement of Legend | Legend is placed at position easy for reference |
@@ -521,3 +521,87 @@ And once all is done, we upload the viz onto Tableau Public
 This Visualization is made available on Tableau Public via this [link](https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard?publish=yes)
 
 ## Section E: Observations 
+
+### Observation 1 - Austra-Asian countries are less eagar for vaccination 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\1a.PNG">
+
+When asked to respond to the question: _"if Covid-19 vaccuibe were available this week, I would definitely get it"_, Australia and the three Asian countries (South Korea, Japan, Singapore) generally answered less favorably as compared to the other countries. In fact, more respondents were non-pro than pro-vaccination (pro-vaccination being defined as those who answered "Strongly Agree" or "Agree" to the subject survey question) - with the **pro-vaccination proportion of the sample being only between 35-44%**. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\1a2.PNG">
+
+Of course, on closer examination, this is mainly attributable to these countries having some of the most undecided group of people among those presented - around **one in four respondents selected "3" (representing "Neutral")** on the ranked scale for this question. Even discounting the neutral group, these four countries also have the least "strong" opinions - that is, they have the least "Strongly Agree" and "Strongly Disagree" responses.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\1a2.PNG">
+
+Responses are slightly more "positive" when we consider a one-year time-frame, i.e. when answering the question, _"If a Covid-19 vaccine becomes available to me a year from now, I definitely intend to get it"_, with the **"pro" proportion to this question for the four countries around 48-57%**. While one could proposition could be that these countries are less afraid of the virus...
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\1c.PNG">
+
+The data seems to show otherwise. Only Australia seems to be rational to this fact - that they are **not as worried about the virus as compared to the other country population and hence have less urgency in wanting the vaccine**. The Asian countries, though, seems to **contradict** this postulation: why, then, do the three Asian countries sit on the fence while being worried about the virus? The answer lies in the following: 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\1d.PNG">
+
+While worried about the virus, the Asian respondents are **also skeptical about the vaccine and its side effects**. This might partially help explain why some of those who are hesitant to take the vaccine immediately, are more receptive to it one year later - perhaps the reasoning is to allow more clinical findings on the side effects, before they are sure of the vaccine. And before we conclude that this could be due to cultural influence, we should also note that France, as an anomaly vis-a-vis other Western countries, also exhibit similar, if not more extreme (less on the fence, more strong views on "anti" vaccine than pro), responses. 
+
+*Note: another proposition could be that death rates are lower in the Asian countries and France as compared to the other countries, and hence the respondents from these countries are not as worried. However, a [cross-reference](https://www.worldometers.info/coronavirus/) to the death rates by country disproofs this theory - while Singapore indeed has one of the lowest death rates due to Covid-19, Franch has a high total number of death (7th gloablly) and death rate (22nd globally), while Japan's total death also ranked at 37th globally.*
+
+As an added nugget of wisdom - it appears that Singaporeans, while skeptical of the vaccine, have good faith in its government (the other countries skeptical about the vaccine, not so much):
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\1e.PNG">
+
+### Observation 2 - Smaller households without children _appears_ to be more eagar for vaccination 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\2a.PNG">
+
+When the dataset is further filtered down to include only respondents with **no children in household and has a household size of 1 or 2**, it can be observed that this sub-sample population are **more "pro" vaccine than the national averages**. In the above example using Denmark, we see that 73% of these small-households-without-children respondents responded positively to the qustion on whether they would get the vaccine if it was available this week, which is about 7 percentage points higher than the country mean of around 66%. This observation, in fact, is observed **across all country in the dataset**. This is similarly observed across all countries (i.e. small-household-without-children are more pro than national average) when we change the question to ask about respondent's opinion **if vaccines were available one year from now**. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\2c.PNG">
+
+Somewhat intuitively, this small-household-without-children group are also **more worried about the virus**. But who exactly are these small household respondents who are so worried and eagar for vaccine though - are they young single or recently-married adults without kids, or the old elderly couples staying away from their children? 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\2e.PNG">
+
+First, we examine those **less than 40 years old** within this sub-population of small-household-without-children. We notice that their **"pro" proportions are not as high** as the country mean - take Denmark for example, this group has 56%, as compared to the national average of 66%. This is generally observed for all the other countries, except United Kingdom - which we should take with a pinch of salt as the number of sample records available for this sub-population is only 25 (similarly, Singapore's data as well, since there are only 15 data points in this instance).
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\2g.PNG">
+
+Indeed, across all countries examined those **60 years and older** within the small-household-without-children are **much more pro-vaccination** than the national average. Taking Denmark's as example, those who fall under this sub-category are almost 20%-pt higher in their "Agree" and "Strongly Agree" responses as compared to the country's mean. This big difference is observed across all countries. What is notable as well is that the **number of respondents 60 years and older** is much **more than the number for respondents younger than 40 years old** (except for UK, Australia, and S. Korea). This would mean that the older population's opinion would have a larger weight in the country mean. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\2h.PNG">
+
+Indeed, household sizes and number of children, while affects the eagarness to get vaccinated, a larger underlying factor could be due to the fact that **older respondents above the age of 60 are more eagar to get vaccinated** and many of these older respondents interviewed happened to be living in smaller households without children. So while at the first glance it appears as if smaller households without children are more eagar for vaccination, as we saw with the younger group of small-household-without-children, they are no more keen to take vaccination than the general masses, and a more appropriate title for this observation should be "**older respondents above the age of 60 are more eagar to get vaccinated**". This brings out an interesting point - what may appear to be the truth may not depict the full picture (even though it is not lying)! 
+
+
+### Observation 3 - Retirees are more pro-vaccination than other employment status, and males more than female
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\3c.PNG">
+
+In a somewhat parallel comparison, we noted that the results are rather consistent when we narrow down to look at the response from "**Retirees**" across the countries. Looking at Denmark for example, the 86% pro-vaccination proportion **coincides** with the proportion for those older respondents above age 60 that we see above (although the number of records are small now, with about 160 older respondents who are not retired yet). This is similarly observed throughout the countries. When we look at every other groups by employment status, they are mostly less pro-vaccination than the country's mean (again, this is due to the retirees pulling their weight in the response count).
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\3d.PNG">
+
+Nor surprisingly, this group also are must **more worried** about the virus than the general masses. However, **only a smaller proportion are worried** (e.g. Denmark's 54%) as compared to those who would get vaccinated if available now (86%) - that is, many would get vaccinated, despite not being worried.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\3g.PNG">
+
+Next we switch to look at the split between males and females: in general, **males are typically slightly more  pro-vaccine** than their female counterparts (except in Sweden). 
+
+Putting them altogether, we can conclude that **retired males above 60 years old without kids in their small 1-2 pax households** are the most pro-vaccination sub-group. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Observations\4.PNG">
+
+This proportion goes up to as high as 90% in Denmark. Why not mention the 100% with UK that does not seem to have any uncertainty? With 2 similar records, the formula is unable to derive a meaninful uncertainty (no "deviation" at all!); looking at Australia, when you have a "perfect deviation", things turned hay-wire - and this is why it is important to present uncertainty along with the main estimated proportions. 
+
+### Additional Comments
+
+While the dataset provided a rich amount of information via the visualization done up, there are inherent biases and missing information present in the data. 
+
+Firstly, there is an obvious missing of countries from certain regions, and a total disregard for the fact that these countries are well-to-do advanced economies. This could be due to a lack of data, but would be interesting to find out how well-perceived are the vaccines in other parts of the world in geographical and socio-economic terms. 
+
+Secondly, given that vaccines are more readily-available in many countries today (and increasingly so), it would be intersting to see how the sentiment shifts with the greater prevalence of the vaccine (for further study, perhaps a time series plot of the response could be explored). 
+
+And lastly, an inherent issue with the existing data: having a larger proportion of older respondent.This will need to be addressed in order to prevent skewing of data by the opinion of a particular sub-population
+
+
+
