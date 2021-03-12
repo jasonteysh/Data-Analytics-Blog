@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-03-12-dataviz-makeover-3/",
+    "title": "ISSS608 DataViz Makeover 3",
+    "description": "This post presents a critical review, recommendations, and makeover of a visualization using data obtained from the Armed Conflict Location & Event Data Project, available via [this link](https://acleddata.com/data-export-tool/)\n\nThis post constitutes part of the assessment for credit towards the Singapore Management Univerisity module ISSS608 Visual Analytics and Application, AY2020/2021 Term 2. \n\nFinal redesigned visualization can be found on this link: \n\nhttps://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard",
+    "author": [
+      {
+        "name": "Jason Tey",
+        "url": {}
+      }
+    ],
+    "date": "2021-03-20",
+    "categories": [],
+    "contents": "\r\n\r\nContents\r\nSection A: Critique of Original Viz\r\nClarity\r\nAesthetic\r\n\r\nSection B: Suggested Improvement\r\nClarity\r\nAesthetic\r\nDiscussion on Likert Scale Visualization\r\nDiscussion on Visualization of Uncertainty\r\nMakeover Concept\r\n\r\nSection C: Redesigned Visualization\r\nSection D: Step-by-Step for Viz Makeover\r\nPart 1 - Data Preparation\r\nPart 2 - Creating Divergent Stacked Bar\r\nPart 3 - Creating Bar Chart to Include as ToolTip\r\nPart 4 - Visualizing Uncertainty\r\nPart 5 - Interactive Dashboard\r\n\r\nSection E: Observations\r\nObservation 1 -\r\nObservation 2 -\r\nObservation 3 -\r\nAdditional Comments\r\n\r\n\r\nThe original visualization using the data available is appended below:\r\n\r\nSection A: Critique of Original Viz\r\nThis section provides a critique of the original visualization and comments on both clarity and aesthetic aspects that could be further improved on. A total of 10 clarity issues and 8 aesthetic issues were identified.\r\nClarity\r\nS/N\r\nIssue\r\nComments\r\n1\r\n\r\n\r\n2\r\n\r\n\r\n3\r\n\r\n\r\n4\r\n\r\n\r\n5\r\n\r\n\r\nAesthetic\r\nS/N\r\nIssue\r\nComments\r\n1\r\n\r\n\r\n2\r\n\r\n\r\n3\r\n\r\n\r\n4\r\n\r\n\r\n5\r\n\r\n\r\nSection B: Suggested Improvement\r\nThis section provides some suggested improvements that could be implemented to resolve issues discussed in Section A.\r\nClarity\r\nS/N\r\nIssue\r\nSuggested Improvements\r\n1\r\n\r\n\r\n2\r\n\r\n\r\n3\r\n\r\n\r\n4\r\n\r\n\r\n5\r\n\r\n\r\nAesthetic\r\nS/N\r\nIssue\r\nSuggested Improvements\r\n1\r\n\r\n\r\n2\r\n\r\n\r\n3\r\n\r\n\r\n4\r\n\r\n\r\n5\r\n\r\n\r\nDiscussion on Likert Scale Visualization\r\nDiscussion on Visualization of Uncertainty\r\nMakeover Concept\r\nTaking in the points discussed above, a redesigned visualization could look like the following:\r\n\r\nAddressing Clarity Issue\r\nS/N\r\nIssue\r\nWays in which proposed viz resolve issues identified\r\n1\r\n\r\n\r\n2\r\n\r\n\r\n3\r\n\r\n\r\n4\r\n\r\n\r\n5\r\n\r\n\r\nAddressing Aethetic Issue\r\nS/N\r\nIssue\r\nWays in which proposed viz resolve issues identified\r\n1\r\n\r\n\r\n2\r\n\r\n\r\n3\r\n\r\n\r\n4\r\n\r\n\r\n5\r\n\r\n\r\nSection C: Redesigned Visualization\r\nUsing Tableau, the redesigned visualization based on the discussion points and concept presented in Section B above is created as follows:\r\nThe redesigned visualization can also be accessed via this link\r\nSection D: Step-by-Step for Viz Makeover\r\nThis section provides a step-by-step guide to recreate the redesgined visualization.\r\nPart 1 - Data Preparation\r\nPart 2 - Creating Divergent Stacked Bar\r\nPart 3 - Creating Bar Chart to Include as ToolTip\r\nPart 4 - Visualizing Uncertainty\r\nPart 5 - Interactive Dashboard\r\nSection E: Observations\r\nObservation 1 -\r\nObservation 2 -\r\nObservation 3 -\r\nAdditional Comments\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-03-12T17:11:48+08:00",
+    "input_file": "dataviz-makeover-3.utf8.md"
+  },
+  {
     "path": "posts/2021-02-06-dataviz-makeover-2/",
     "title": "ISSS608 DataViz Makeover 2",
     "description": "This post presents a critical review, recommendations, and makeover of a visualization using data obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github\n\nThis post constitutes part of the assessment for credit towards the Singapore Management Univerisity module ISSS608 Visual Analytics and Application, AY2020/2021 Term 2. \n\nFinal redesigned visualization can be found on this link: \n\nhttps://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard",
