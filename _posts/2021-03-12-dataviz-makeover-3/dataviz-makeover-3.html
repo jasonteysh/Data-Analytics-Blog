@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.6/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","Media/Original.PNG"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.6/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","Media/Dashboard/Final.PNG","Media/Dashboard/Step0.PNG","Media/Dashboard/Step1.PNG","Media/Dashboard/Step2.png","Media/Dashboard/Step3.png","Media/Dashboard/Step4a.png","Media/Dashboard/Step4b.PNG","Media/Dashboard/Step5a.png","Media/Dashboard/Step5b.png","Media/Dashboard/Step5c.png","Media/Geospatial/Step1.PNG","Media/Geospatial/Step10.PNG","Media/Geospatial/Step10a.PNG","Media/Geospatial/Step10b.PNG","Media/Geospatial/Step2.PNG","Media/Geospatial/Step3.PNG","Media/Geospatial/Step3a.PNG","Media/Geospatial/Step4.PNG","Media/Geospatial/Step4a.png","Media/Geospatial/Step4b.png","Media/Geospatial/Step5.png","Media/Geospatial/Step6.PNG","Media/Geospatial/Step7.9.PNG","Media/Geospatial/Step7.PNG","Media/Geospatial/Step8.png","Media/Geospatial/Step9.PNG","Media/Original.PNG","Media/Step1.PNG","Media/Step2.PNG","Media/Step3.PNG","Media/Step4.PNG","Media/Step4b.PNG","Media/Step4c.PNG","Media/Temporal/Step0.png","Media/Temporal/Step1.PNG","Media/Temporal/Step10.PNG","Media/Temporal/Step11a.PNG","Media/Temporal/Step11b.PNG","Media/Temporal/Step11c.PNG","Media/Temporal/Step12.png","Media/Temporal/Step12b.png","Media/Temporal/Step12c.PNG","Media/Temporal/Step12d.PNG","Media/Temporal/Step12e.PNG","Media/Temporal/Step13a.png","Media/Temporal/Step13b.PNG","Media/Temporal/Step13c.PNG","Media/Temporal/Step13d.png","Media/Temporal/Step14.PNG","Media/Temporal/Step14a.png","Media/Temporal/Step15.PNG","Media/Temporal/Step2.PNG","Media/Temporal/Step3.PNG","Media/Temporal/Step4.PNG","Media/Temporal/Step5.PNG","Media/Temporal/Step6.png","Media/Temporal/Step7.PNG","Media/Temporal/Step8a.PNG","Media/Temporal/Step8b.png","Media/Temporal/Step9a.PNG","Media/Temporal/Step9b.PNG","Media/Temporal/Step9c.png","Media/Temporal/Step9d.PNG","Media/Temporal/Step9e.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1467,9 +1467,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#section-d-step-by-step-for-viz-makeover">Section D: Step-by-Step for Viz Makeover</a>
 <ul>
 <li><a href="#part-1---data-preparation">Part 1 - Data Preparation</a></li>
-<li><a href="#part-2---creating-divergent-stacked-bar">Part 2 - Creating Divergent Stacked Bar</a></li>
-<li><a href="#part-3---creating-bar-chart-to-include-as-tooltip">Part 3 - Creating Bar Chart to Include as ToolTip</a></li>
-<li><a href="#part-4---visualizing-uncertainty">Part 4 - Visualizing Uncertainty</a></li>
+<li><a href="#part-2---creating-geospatial-visualization">Part 2 - Creating Geospatial Visualization</a></li>
+<li><a href="#part-3---animating-changes-on-map">Part 3 - Animating Changes on Map</a></li>
+<li><a href="#part-4---visualizing-change">Part 4 - Visualizing Change</a></li>
 <li><a href="#part-5---interactive-dashboard">Part 5 - Interactive Dashboard</a></li>
 </ul></li>
 <li><a href="#section-e-observations">Section E: Observations</a>
@@ -1717,13 +1717,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </table>
 <h2 id="section-c-redesigned-visualization">Section C: Redesigned Visualization</h2>
 <p>Using Tableau, the redesigned visualization based on the discussion points and concept presented in Section B above is created as follows:</p>
-<p>The redesigned visualization can also be accessed via <a href="https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard">this link</a></p>
+<p><img src="Media/Dashboard/Final.PNG"></p>
+<p>The redesigned visualization can also be accessed via <a href="https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover3/Dashboard">this link</a></p>
 <h2 id="section-d-step-by-step-for-viz-makeover">Section D: Step-by-Step for Viz Makeover</h2>
 <p>This section provides a step-by-step guide to recreate the redesgined visualization.</p>
 <h3 id="part-1---data-preparation">Part 1 - Data Preparation</h3>
-<h3 id="part-2---creating-divergent-stacked-bar">Part 2 - Creating Divergent Stacked Bar</h3>
-<h3 id="part-3---creating-bar-chart-to-include-as-tooltip">Part 3 - Creating Bar Chart to Include as ToolTip</h3>
-<h3 id="part-4---visualizing-uncertainty">Part 4 - Visualizing Uncertainty</h3>
+<p><strong>Step 1.1 - Importing Data</strong></p>
+<p>After downloading the Southeast Asian 2010-2020 dataset, open up Tableau Desktop then drag-and-drop the downloaded Excel file onto a new tableau main page.</p>
+<p><img src="Media/Step1.PNG"></p>
+<p>We can leave most of the data as-is, since they are relatively clean. We proceed to open up a new Worksheet in Tableau. Once that is done, we will quickly realise that Tableau automatically classified many of the numerical variables as Measures. We will need to shift these to become Dimensions. click on the following Measures while holding down the Ctrl key:-</p>
+<ul>
+<li>Event Id No Cnty</li>
+<li>Geo Precision</li>
+<li>Inter1</li>
+<li>Inter2</li>
+<li>Interaction</li>
+<li>ISO</li>
+<li>Time Precision</li>
+</ul>
+<p>These variables are shifted to Dimension as their numerical values are codes representative of something and their numbers do not have any ordinal or nominal value.</p>
+<p><img src="Media/Step3.PNG"></p>
+<h3 id="part-2---creating-geospatial-visualization">Part 2 - Creating Geospatial Visualization</h3>
+<p><strong>Step 2.1 - Base Map</strong></p>
+<p>The very first step to creating a geospatial visualization is to create a base map. The dataset conveniently came along with Longitudinal and Latitudinal data to map out where each of the conflict event happened; Tableau on the other hand, made it even easier by automatically recognizing that these variables have geographical role and assigned them to their correct lat-long meaning based on their name. We now drag the Longitude to Columns, and Latitude to Rows.</p>
+<p><img src="Media/Geospatial/Step1.PNG"></p>
+<h3 id="part-3---animating-changes-on-map">Part 3 - Animating Changes on Map</h3>
+<h3 id="part-4---visualizing-change">Part 4 - Visualizing Change</h3>
 <h3 id="part-5---interactive-dashboard">Part 5 - Interactive Dashboard</h3>
 <h2 id="section-e-observations">Section E: Observations</h2>
 <h3 id="observation-1--">Observation 1 -</h3>

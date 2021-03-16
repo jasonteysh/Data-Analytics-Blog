@@ -113,9 +113,9 @@ Taking in the points discussed above, a redesigned visualization could look like
 
 Using Tableau, the redesigned visualization based on the discussion points and concept presented in Section B above is created as follows:
 
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Final.PNG">
 
-
-The redesigned visualization can also be accessed via [this link](https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard)
+The redesigned visualization can also be accessed via [this link](https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover3/Dashboard)
 
 
 ## Section D: Step-by-Step for Viz Makeover 
@@ -124,15 +124,39 @@ This section provides a step-by-step guide to recreate the redesgined visualizat
 
 ### Part 1 - Data Preparation
 
+**Step 1.1 - Importing Data** 
 
-### Part 2 - Creating Divergent Stacked Bar
+After downloading the Southeast Asian 2010-2020 dataset, open up Tableau Desktop then drag-and-drop the downloaded Excel file onto a new tableau main page.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Step1.PNG">
+
+We can leave most of the data as-is, since they are relatively clean. We proceed to open up a new Worksheet in Tableau. Once that is done, we will quickly realise that Tableau automatically classified many of the numerical variables as Measures. We will need to shift these to become Dimensions. click on the following Measures while holding down the Ctrl key:-
+
+- Event Id No Cnty
+- Geo Precision
+- Inter1
+- Inter2
+- Interaction
+- ISO
+- Time Precision
+
+These variables are shifted to Dimension as their numerical values are codes representative of something and their numbers do not have any ordinal or nominal value. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Step3.PNG">
 
 
+### Part 2 - Creating Geospatial Visualization
 
-### Part 3 - Creating Bar Chart to Include as ToolTip
+**Step 2.1 - Base Map** 
+
+The very first step to creating a geospatial visualization is to create a base map. The dataset conveniently came along with Longitudinal and Latitudinal data to map out where each of the conflict event happened; Tableau on the other hand, made it even easier by automatically recognizing that these variables have geographical role and assigned them to their correct lat-long meaning based on their name. We now drag the Longitude to Columns, and Latitude to Rows.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step1.PNG">
+
+### Part 3 - Animating Changes on Map 
 
 
-### Part 4 - Visualizing Uncertainty
+### Part 4 - Visualizing Change
 
 
 ### Part 5 - Interactive Dashboard
