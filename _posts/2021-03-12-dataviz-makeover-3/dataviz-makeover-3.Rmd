@@ -77,16 +77,15 @@ This section provides some suggested improvements that could be implemented to r
 | 5   | | |
 
 
-### Discussion on Likert Scale Visualization
+### Discussion on Geospatial Visualization 
 
-### Discussion on Visualization of Uncertainty
+### Discussion on Visualizing Changes
 
 ### Makeover Concept
 
-
 Taking in the points discussed above, a redesigned visualization could look like the following: 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-02-06-dataviz-makeover-2\Media\Concept.jpg">
+
 
 #### Addressing Clarity Issue
 
@@ -436,6 +435,35 @@ Similarly, we return to the Geospatial Worksheet and do the same to the **Actors
 
 Now we commence with the creation of Dashboard by first clicking on the "New Dashboard" button at the borron of the viz (beside the Worksheet tabs).
 
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step0.PNG">
+
+Then drag-and-drop both the Worksheets onto the canvas
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step1.PNG">
+
+Change the Size from the default "Fixed Size" to "Automatic"
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step2a.PNG">
+
+Rearrange the Filters and Parameters as such:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step3.PNG">
+
+Add in Action to interlink the two sheets. First click on the Dashboard tab at the toolbar, then select "Actions..."
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step4c.PNG" style="width:60%; display:block; margin:0 auto;">
+
+At the popped up window, select "Add Action >" then choose "Highlight". At the Add Highlight Action window, make sure both sheets are selected for both the Source Sheets pane and the Target Sheets pane. Run action on "Select" then click OK 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step4d.PNG" style="width:80%; display:block; margin:0 auto;">
+
+Next, we confirm that the animation is on by clicking on the Format tab on the Toolbar, selecting "Animations..." then check that it is on "On" 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step5d.PNG" style="width:90%; display:block; margin:0 auto;">
+
+And finally. we click on the Slopegraph Worksheet, and then select the funnel icon to use the Worksheet as Filter (so that when a country for a particular year is selected, the display on the map changes as well) 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step5e.PNG" style="width:90%; display:block; margin:0 auto;">
 
 
 ## Section E: Observations 
