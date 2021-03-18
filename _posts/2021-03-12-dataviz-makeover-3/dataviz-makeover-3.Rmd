@@ -37,44 +37,65 @@ This section provides a critique of the original visualization and comments on b
 
 | S/N | Issue |Comments                                                                            |
 |-----|-------|------------------------------------------------------------------------------------|
-| 1   | | |
-| 2   | | |
-| 3   | | |
-| 4   | | |
-| 5   | | |
+| 1   | Cluttered Opaque Dots | This is both an aesthetic and clarity issue - dots overlapping covers other underlying dots that may be overlooked as the dots appear to be 100% opaque, this means useful information is lost, and may even mislead viewers into thinking there are lesser conflicts than really were|
+| 2  | Missing Magnitude of Impact | While each dot represents one conflict event, not all events are of equal impact. A peaceful protest would likely have lesser impact in the form of lives lost than a battle, but even this is not always the case. It would be useful to also visualize the number of fatalities on the map to get a sense of the deadliness of the event.|
+| 3  | Year of Event | While the geospatial map plotted out the conflict locations, it does not offer the option to zoom in to individual year to see how situation developed through the years|
+| 4  | Titles | Titles for both the viz and the legend are accurate, which is commendable. However, more information could be provided (e.g. clarify how many events do each dot represents on the map; what is the unit of measure for the time series viz|
+| 5  | Confusing Repeated Color| Both the geospatial map and the time series viz uses the same shade of blue, together with the fact that the legend was placed beside the time series viz, at first glance, it appears as if the time series is only plotting changes for *Battles* events, which are denoted by the same shade of blue on the map. |
+| 6  | Axes for Time Series Viz| It is unclear what "Count of Sheet1" is referring to - what exactly is the count for and what is 'Sheet1'? |
+| 7  | Inconsistent Y-Axis scale| The Temporal viz in the trellis panes also differ from each other: from the counts for *Battles* from around 400 to 700 to the counts for *Riots* lesser than 20, they all look similar in scale. The changes are also exaggerated for those in smaller scales, distorting a realistic sense of comparison |
+| 8  | Non-Informative Viz | The time series viz, in itself, does not provide any informative insights, other than the actual changes in the count of each types of conflict event. There is no clear patterns or trends observed in the trellis view, and with the inconsistent Y-Axis, we cannot even formulate meaningful comparison between the event counts or comment much about the trends (since events with smaller counts would have flatter lines with more minute changes if the scales are aligned) |
+| 9   | Tooltip | Tooltip was left as default without proper phrasing and explanation on the values of the variables. Which does not help with enhancing the clarity of the two visualizations (viewers would not have very applicable use of the longitude and latitude information provided, for example). |
+| 10  | Source of Data| The source of data is mysteriously missing. This reduces the reliability of the data used (and could also get the viz producer into trouble, given the terms-and-condition for use of the data from ACLED) |
 
 ### Aesthetic
 
 | S/N | Issue |Comments                                                                            |
 |-----|-------|------------------------------------------------------------------------------------|
-| 1   | | |
-| 2   | | |
-| 3   | | |
-| 4   | | |
-| 5   | | |
+| 1   | Cluttered Opaque Dots | As mentioned earlier, this is both an aesthetic and clarity issue; apart from the lack of clarity, the cluttered dots also made it visually annoying when some dots are partially or fully hidden and it is difficult to pinpoint the exact event even when we attempt to hover over|
+| 2   | Map Background | Dark background for the land masses makes it less contrasting with the dots and the boundary lines |
+| 3   | Legend for Map | While the color scheme is meant for the geospatial map, it is placed far away, separated by the time series viz. Beyond confusing, it also requires viewers' eyes to track across the time series viz to see what color on the map corresponds to what event on the legend - viewers may even get distracted while doing that, or worse, frustrated. |
+| 4   | Y-Axis for Temporal Viz | Other than the fact that the inconsistent Y-Axiss distort the sense of comparison, it is also ugly when there are different "gaps" between the tick marks. More critically, the repeated "Count of Sheet1" in itself is redundant, it could have been combined together as one. And lastly, the orientation of the "Count of Sheet1" means viewers have to tilt their head to read it - not as user friendly.| 
+| 5   | Lack of Grid Lines | There is also a lack of vertical grid lines to help guide viewers to map the count values to the year. |
+| 6   | X-Axis Abruptly Cut-Off | X-Axis of the time series viz is cut-off at the end, with the year '*2020*' appearing chopped up.|
+| 7   | Lack of Interactivity | Other than the toggling of Country, the viz does not allow changing other variables such as Actors involved or the type of conflict event.|
+| 8   | Proportion of the Visualizations | The geospatial map takes up half the canvas, whereas the temporal viz had to share real estate with the legend and filter - this makes the overall visualization appear lopsided. | 
+
 ## Section B: Suggested Improvement
 
 This section provides some suggested improvements that could be implemented to resolve issues discussed in Section A. 
 
 ### Clarity 
 
-| S/N | Issue | Suggested Improvements                                                             |
-|-----|-------|------------------------------------------------------------------------------------|
-| 1   | | |
-| 2   | | |
-| 3   | | |
-| 4   | | |
-| 5   | | |
+### Clarity
+
+| S/N | Issue | Suggested Improvement                                                       |
+|-----|-------|-----------------------------------------------------------------------------|
+| 1   | Cluttered Opaque Dots | Increase the alpha / Decrease the opacity of the dots, so as to allow overlapped dots to be visible |
+| 2  | Missing Magnitude of Impact | Incorporate the Fatalities numbers as one of the variables in the visualization. In this case, it will be a multiple-variable visualization, where dot can continue to represent one event count, color as the event type, and size as the deadliness / number of fatalities|
+| 3  | Year of Event | Create additional filters to allow toggling of year. In fact, to better visualize changes, animation may be a good option. |
+| 4  | Titles | Include subtitles to better inform viewers of the visualization that they are looking at, especially key critical information, such as what each dot on the map represents.|
+| 5  | Confusing Repeated Color| Avoid using repeated color to represent elements of totally different nature to prevent unnecessary confusion. |
+| 6  | Axes for Time Series Viz| Provide clear axes title to make sure viewers are able to identify with the data being presented. Unit of measure should also be specified if need be.|
+| 7  | Inconsistent Y-Axis scale| Axes in trellis panes should be consistent as much as possible to aid comparison. If not possible, alternative presentation approaches should be explored |
+| 8  | Non-Informative Viz | The trellis pane viz does not have any value-add in the story told - perhaps a simple get-around is to just put all the different types in on continuous axis and differentiate the lines by different colors (consistent with what is on the map). However, authors should be mindful of the story they are interested to tell - if the changes within two particular years are not important to the viewer (i.e. how the lines change), having many kinks in the line creates more confusion. In this case, since conflict events are more ad-hoc in nature, it is more likely for viewers to be interested to know how the numbers changed from one timeframe to another (e.g. 2010 to 2020), instead of all the changes in between. A slopegraph would provide that clearer picture without additional encumbrances. If user really wants to, an option to change the start and end year may be provided to allow users to toggle between the start and end timeframe that they wish to look at. |
+| 9   | Tooltip | Tooltip provides a good opportunity to better inform viewers of the story behind each data point, and should be put to good use. |
+| 10  | Source of Data| Include a source note to credit data owner! |
+
+
 
 ### Aesthetic
 
 | S/N | Issue | Suggested Improvements                                                             |
 |-----|-------|------------------------------------------------------------------------------------|
-| 1   | | |
-| 2   | | |
-| 3   | | |
-| 4   | | |
-| 5   | | |
+| 1   | Cluttered Opaque Dots | Increase the alpha / Decrease the opacity of the dots, so as to allow overlapped dots to be visible |
+| 2   | Map Background | Reduce the washout of the background map |
+| 3   | Legend for Map | Place legends where they are easy to be referred by viewers. Legends are meant to enlighten, not create more confusion. |
+| 4   | Y-Axis for Temporal Viz | Make sure axes are consistent and tick marks evenly spaced out. Titles should also be horizontally oriented to reduce the need for uncomfortable head-tilts| 
+| 5   | Lack of Grid Lines | If need be, grid lines or point dots should be provided to guide viewers track the data points along the x and y axes. |
+| 6   | X-Axis Abruptly Cut-Off | Make sure axes marks are properly spaced out and visible; if needed, ensure flexibility is incorporated to allow viewers to change the size according to the size of their screen (in Tableau, change the view to "Entire View"). |
+| 7   | Lack of Interactivity | Include other variables as filters/parameters to better aid users/viewers decipher and gain insights from the visualization|
+| 8   | Proportion of the Visualizations | Ensure real estate of the dashboard is maximized and visualizations are evenly-spaced and proportionate to one another | 
 
 
 ### Discussion on Geospatial Visualization 
