@@ -2069,6 +2069,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#clarity-2">Clarity</a></li>
 <li><a href="#aesthetic-1">Aesthetic</a></li>
 <li><a href="#discussion-on-geospatial-visualization">Discussion on Geospatial Visualization</a></li>
+<li><a href="#further-discussion-on-animating-changes-on-geospatial-visualization">Further Discussion on Animating Changes on Geospatial Visualization</a></li>
 <li><a href="#discussion-on-visualizing-changes">Discussion on Visualizing Changes</a></li>
 <li><a href="#makeover-concept">Makeover Concept</a></li>
 </ul></li>
@@ -2077,9 +2078,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#part-1---data-preparation">Part 1 - Data Preparation</a></li>
 <li><a href="#part-2---creating-interactive-geospatial-dot-density-plot-with-proportional-symbols">Part 2 - Creating Interactive Geospatial Dot Density Plot with Proportional Symbols</a></li>
-<li><a href="#part-3---animating-changes-on-geospatial-map">Part 3 - Animating Changes on Geospatial Map</a></li>
-<li><a href="#part-4---visualizing-change-using-slopegraph">Part 4 - Visualizing Change using Slopegraph</a></li>
-<li><a href="#part-5---interactive-dashboard">Part 5 - Interactive Dashboard</a></li>
+<li><a href="#part-3---visualizing-change-using-slopegraph">Part 3 - Visualizing Change using Slopegraph</a></li>
+<li><a href="#part-4---interactive-dashboard">Part 4 - Interactive Dashboard</a></li>
 </ul></li>
 <li><a href="#section-e-observations">Section E: Observations</a>
 <ul>
@@ -2088,6 +2088,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#observation-3--">Observation 3 -</a></li>
 <li><a href="#additional-comments">Additional Comments</a></li>
 </ul></li>
+<li><a href="#annex---animating-changes-on-geospatial-map">Annex - Animating Changes on Geospatial Map</a></li>
 </ul>
 </nav>
 </div>
@@ -2250,7 +2251,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr class="odd">
 <td>3</td>
 <td>Year of Event</td>
-<td>Create additional filters to allow toggling of year. In fact, to better visualize changes, animation may be a good option.</td>
+<td>Create additional filters to allow toggling of year. In fact, to better visualize changes, animation may be considered.</td>
 </tr>
 <tr class="even">
 <td>4</td>
@@ -2347,6 +2348,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </tbody>
 </table>
 <h3 id="discussion-on-geospatial-visualization">Discussion on Geospatial Visualization</h3>
+<p>There are several commonly-used geospatial visualization techniques available, these include Cartograms, Choropleth maps, Proportional Symbols, and Dot Density Maps. The original viz adopted the latter technique. Amongst them, the former (Cartograms) is the least popular, as “<a href="http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/cartograms/">their use if oten more for their thratrical value (i.e. to grab the attention of an audience) and less for their ability to help folks understand subtle details of geographic datasets</a>”</p>
+<p>The dot density maps is useful in showing “<a href="http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/dot-density/">diferences in georaphic distributions across a landscape</a>”. In the original viz, a one-to-one dot densioty map (one dot represents one count) is used. The dot density map has the following advantages:-</p>
+<ol type="1">
+<li>raw data and simple counts or rates/ratio can all be mapped (as opposed to <a href="http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/choropleth/">Choropleth maps</a> which requires the latter)</li>
+<li>data need not be tied to enumeration units (that is, it does not require the variable of interest to be conceptually measurable anywhere in space)</li>
+<li>it works fine with black and white when color is not an option (and if color is available, it can be used to represent other variable of interest)</li>
+</ol>
+<p>Points 1 and 2 are particularly important considerations in the context of our visualization - to visualize incidence of conflict events, further processing of the data (e.g. divide it by the population) would be required in order to adopt the Choropleth technique. Point 3 is an added bonus (given that Tableau has color functions available), since a Choropleth will rely on colors to represent the incidence of conflict event (in this case, potentially event per population), it loses the option to add on another dimension that a dot density map allows using color. In this case, one plausible measure to include, is the type of conflict event. In this case, each dot not only tells us that a conflict occur, but can very intuitively inform us whether it is a protest or a battle.</p>
+<p>In fact, proportional symbols may be added onto the dot density map (in fact, it is also possible to add proportional symbols on Choropleth maps - but that is, at this juncture, besides the point). Size of each dot can also be varied to represent another added dimension - one interesting variable is “Fatality”, which allows viewers to appreciate the deadliness of each of the event. With the combination of the size and color use, it is also possible to spot types of events that generally lead to more fatalities (i.e. bigger dots) and whether they concentrate in particular regions/countries. One <a href="https://www.axismaps.com/guide/proportional-symbols">limitation of proportional symbol</a>, though, is that it could lead to congestion on the map; however, it is a small issue and worthy trade-off for the added information. In fact, increasing the transparency could help alleviate part of the problem Another shortcoming is that readers generally do not estimate the areas of symbols very well - however, for the purpose of this visualization, the sizes are to give general sense of fatalities, especially between different event types, extraction of actual numbers are secondary, and can be complemented by incorporation of useful Tooltips.</p>
+<p>In parallel, this is also one major limitation of dot density maps - they are terrible for retrieving numbers from the map, people are generally not patient in manually counting the number of dots in a region to derive the total number of events in the particular region. Similarly, the purpose of the visualization is to give a broad overview of the concentration of a particular conflict type geographically, to extract further detail, useful Tooltips would need to be added. To extract the total number of conflict in the country for the selected years, a complementary viz would be needed (see Discussion on Visualizing Changes below).</p>
+<p>In conclusion, a dot density map with each dot representing one event, the color of the dot representing the event type, and the size of the dot representing the number of fatalities, with appropriate filters for users to toggle would serve the visualization objective of this makeover.</p>
+<h3 id="further-discussion-on-animating-changes-on-geospatial-visualization">Further Discussion on Animating Changes on Geospatial Visualization</h3>
+<p>According to <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.122.8704&amp;rep=rep1&amp;type=pdf">Daassi, Nigay &amp; Fauvet (2005)</a>, Ed Chi’s Visualization Process are structured into four steps, “namely: (1) data, (2) point of view of the data, (3) visualization space and (4) point of view on the visualization space.” Temporal data visualization can be classified based on the different anchoring points between the visualization processes of the temporal domain (i.e. the time element), and the structural domain (i.e. the factor/variable that we are interested in). Hence, the author’s taxonomy are categorised into four main groups, based on the anchoring point between the temporal and structural domains at the four different steps as described at the start of this paragraph. The authors, however, does not explicitly discuss the merits and shortcomings of each of these visualization frames.</p>
+<p>The authors, however, did provided a further discussion on the difference between static and dynamic techniques. Dynamic techniques, as defined by the authors, have visual representation that changes automatically, and animation is frequently used to visualize spatio-temporal data. Static techniques, on the other hand, does not change automatically over time. The author of this makeover explored both the static and dynamic techniques with the existing data on hand.</p>
+<p>In the exploration of the two models, one trade-off became apparent: dynamic animation allows for viewers to appreciate the shifts in patterns (in this case, location and deadliness of conflict events) without the need for manual toggling; however, in exchange, viewers surrender the autonomy to explore the data on their own terms. In the context of the subject ACLED dataset, with the Year set as the animating factor (i.e. for the viz to dynamically move forward through the years), viewers will not have the option to view the distribution for other time period beyond the yearly frame. In the context of conflict that can drag on through different years and for length of more than years (or decades, for the matter), having the temporal frame fixed at one calendar year may compromise on contextual nuances.</p>
+<p>Furthermore, the benefit to having the changes dynamically animated is not strong in the context of conflict events, which occurrences are more ad hoc in nature than other events, such as child mortality or basic education, where changes in their rates are more meaningfully tracked through its temporal progression. In contrast, conflict events are more “opportunistic” - indeed, they may increase or decrease through particular periods of interest, but these are consequently also periods of particular interest - it is unlikely for people to be interested in knowing the number of conflict events in Singapore between 2010 to 2020 simply because it is not a period of any particular interest. Conversely, it is interesting to know the number of conflict events, say, in the Phiippines from Jun 2016, when President Rodrigo Duterte assumed office and declared its “war on drgs” - this is a particular period because it is of particular interest (versus infant mortality rate or education rate, which is more actively tracked and hence the changes year-on-year is more meaningfully analysed).</p>
+<p>All in all, the costs to having a dynamic visualization in this context heavily outweighs its benefits. While the author has made an attempt to incorporate an animated dynamic visualization, the eventual decision is for the dynamic model with appropriate filters that allow users to toggle for the time period that they wish to examine freely to be adopted.</p>
 <h3 id="discussion-on-visualizing-changes">Discussion on Visualizing Changes</h3>
 <h3 id="makeover-concept">Makeover Concept</h3>
 <p>Taking in the points discussed above, a redesigned visualization could look like the following:</p>
@@ -2503,15 +2521,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><img src="Media/Geospatial/Step10b.PNG" style="width:70%; display:block; margin:0 auto;"></p>
 <p>We now have an informative geospatial dot density map of conflict events with proportional representation of the fatalities.</p>
 <p><img src="Media/Geospatial/final.png"></p>
-<h3 id="part-3---animating-changes-on-geospatial-map">Part 3 - Animating Changes on Geospatial Map</h3>
-<p>While interactive and information, the geospatial map does not make good use of the rich temporal data that the dataset provides. To better visualize change, animation can be included to present a viz that shows the conflict event by time.</p>
-<p>This is relatively straight forward in Tableau: first, we drag-and-drop the <strong>Event Date</strong> variable onto the Pages tab</p>
-<p><img src="Media/Geospatial/Step9.PNG"></p>
-<p>Next, go to the Format tab on the tool bar, select “Animation” from the drop-down, then turn Workbook Default “On”. Change the Duration to “0.50 seconds (Medium)” and Style to “Sequential” if not already done</p>
-<p><img src="Media/Geospatial/Step9c.PNG"></p>
-<h3 id="part-4---visualizing-change-using-slopegraph">Part 4 - Visualizing Change using Slopegraph</h3>
+<h3 id="part-3---visualizing-change-using-slopegraph">Part 3 - Visualizing Change using Slopegraph</h3>
 <p>We next open up a new Worksheet to create the second portion of the overall viz visualizing change using the Slopegraph.</p>
-<p><strong>Step 4.1 - Data Preparation &amp; Variable Creation</strong></p>
+<p><strong>Step 3.1 - Data Preparation &amp; Variable Creation</strong></p>
 <p>As usual, before we dive straight into creating the viz, we will do some data wrangling and create some useful variables first.</p>
 <p><strong><em>Year</em></strong></p>
 <p>By default, the <strong>Year</strong> variable is of numeric dimension type, we will first need to change it to the proper Date type.</p>
@@ -2535,7 +2547,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><strong><em>First or Last</em></strong></p>
 <p>Finally, we create a variable called <strong>First or Last</strong> - this variable will be useful in allow us to show a line on the Slopegraph for only the starting and ending year; where either one is missing, the data point will only appear as a dot.</p>
 <p><img src="Media/Temporal/Step7.PNG" style="width:50%; display:block; margin:0 auto;"></p>
-<p><strong>Step 4.2 - Creating Basic Slopegraph</strong></p>
+<p><strong>Step 3.2 - Creating Basic Slopegraph</strong></p>
 <p>To create a basic Slopegraph, drag-and-drop the <strong>Event Date</strong> dimension to Columns, the <strong>Selected</strong> variable (that takes in user selection of either number of fatalities or events) into Rows, and <strong>Country</strong> into the Detail tab.</p>
 <p><img src="Media/Temporal/Step5.PNG"></p>
 <p>But wait… this looks like a normal line graph and not slope graph! Recall earlier we mentioned the need to include the <strong>First or Last</strong> variable, now is the time. We drag-and-drop it onto the Size tab.</p>
@@ -2543,7 +2555,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Next, we go to the right hand panel where we find the “AGG(First or Last)” pane; we right-click on the False legend, and select “Hide”</p>
 <p><img src="Media/Temporal/Step8b.png"></p>
 <p>This way, we should see the lines taking shape, with only two columns, one for the starting year, and one the ending. With this, we would also want viewers to be able to change the start and end year.</p>
-<p><strong>Step 4.3 - Year Filter</strong></p>
+<p><strong>Step 3.3 - Year Filter</strong></p>
 <p>And that brings us to the creation of a Year filter.</p>
 <p>We first drag-and-drop the Event Date variable onto the Filter pane. A pop-up will appear - we select “Years” from the option list</p>
 <p><img src="Media/Temporal/Step9a.PNG"></p>
@@ -2555,7 +2567,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><img src="Media/Temporal/Step9d.PNG"></p>
 <p>Lastly, we click on the triangle at the right-end of the pill (this time green) again - check on “Show Filter”</p>
 <p><img src="Media/Temporal/Step9e.png"></p>
-<p><strong>Step 4.4 - Aesthetic Enhancement</strong></p>
+<p><strong>Step 3.4 - Aesthetic Enhancement</strong></p>
 <p><strong><em>Entire View</em></strong></p>
 <p>First thing first, we change the view to “Entire View”</p>
 <p><img src="Media/Temporal/Step10.PNG"></p>
@@ -2577,13 +2589,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><strong><em>Title</em></strong></p>
 <p>Next, we change the title to something more accurate by double-clicking on the viz title, and changing it to the following:</p>
 <p><img src="Media/Temporal/Step13c.PNG" style="width:80%; display:block; margin:0 auto;"></p>
-<p><strong>Step 4.5 - Tooltip</strong></p>
+<p><strong>Step 3.5 - Tooltip</strong></p>
 <p>And finally, we include Tooltip by clicking on the Tooltip tab and making the changes as follows (all variables needed should already be within the original Tooltip):</p>
 <p><img src="Media/Temporal/Step15.PNG" style="width:80%; display:block; margin:0 auto;"></p>
 <p>We now have the final Slopegraph!</p>
 <p><img src="Media/Temporal/final.PNG"></p>
-<h3 id="part-5---interactive-dashboard">Part 5 - Interactive Dashboard</h3>
-<p><strong>Step 5.1 - Linking Filters</strong></p>
+<h3 id="part-4---interactive-dashboard">Part 4 - Interactive Dashboard</h3>
+<p><strong>Step 4.1 - Linking Filters</strong></p>
 <p>Before we even create the Dashboard, we would need to link up the various filters across the two different sheets in order for the filters to apply across viz from from sheets.</p>
 <p>At the Temporal Slopegraph sheet, click on the small triangle on the top-right corner of the Year filter pane. Select the option “Apply to Worksheets”, then choose “Selected Worksheets…”</p>
 <p><img src="Media/Temporal/Step14a.png"></p>
@@ -2591,7 +2603,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><img src="Media/Temporal/Step14.PNG" style="width:50%; display:block; margin:0 auto;"></p>
 <p>Similarly, we return to the Geospatial Worksheet and do the same to the <strong>Actors</strong>, <strong>Country</strong>, and <strong>Event Type</strong> filters.</p>
 <p><img src="Media/Geospatial/Step6.PNG" style="width:50%; display:block; margin:0 auto;"></p>
-<p><strong>Step 5.2 - Creating Dashboard</strong></p>
+<p><strong>Step 4.2 - Creating Dashboard</strong></p>
 <p>Now we commence with the creation of Dashboard by first clicking on the “New Dashboard” button at the borron of the viz (beside the Worksheet tabs).</p>
 <p><img src="Media/Dashboard/Step0.PNG"></p>
 <p>Then drag-and-drop both the Worksheets onto the canvas</p>
@@ -2604,8 +2616,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><img src="Media/Dashboard/Step4c.PNG" style="width:60%; display:block; margin:0 auto;"></p>
 <p>At the popped up window, select “Add Action &gt;” then choose “Highlight”. At the Add Highlight Action window, make sure both sheets are selected for both the Source Sheets pane and the Target Sheets pane. Run action on “Select” then click OK</p>
 <p><img src="Media/Dashboard/Step4d.PNG" style="width:80%; display:block; margin:0 auto;"></p>
-<p>Next, we confirm that the animation is on by clicking on the Format tab on the Toolbar, selecting “Animations…” then check that it is on “On”</p>
-<p><img src="Media/Dashboard/Step5d.PNG" style="width:90%; display:block; margin:0 auto;"></p>
 <p>And finally. we click on the Slopegraph Worksheet, and then select the funnel icon to use the Worksheet as Filter (so that when a country for a particular year is selected, the display on the map changes as well)</p>
 <p><img src="Media/Dashboard/Step5e.PNG" style="width:90%; display:block; margin:0 auto;"></p>
 <h2 id="section-e-observations">Section E: Observations</h2>
@@ -2613,6 +2623,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 id="observation-2--">Observation 2 -</h3>
 <h3 id="observation-3--">Observation 3 -</h3>
 <h3 id="additional-comments">Additional Comments</h3>
+<h2 id="annex---animating-changes-on-geospatial-map">Annex - Animating Changes on Geospatial Map</h2>
+<p>As mentioned in Section B on the further discussion on “Animating Changes on Geospatial Visualization”, the costs to animating the geospatial viz in the context of this dataset outweighs its benefits, and we will not be incorporating animation for the purpose of the makeover. However, should reader be interested, animation can be added rather easily in Tableau as the steps are straight forward.</p>
+<p>First, we drag-and-drop the <strong>Event Date</strong> variable onto the Pages tab</p>
+<p><img src="Media/Geospatial/Step9.PNG"></p>
+<p>Next, go to the Format tab on the tool bar, select “Animation” from the drop-down, then turn Workbook Default “On”. Change the Duration to “0.50 seconds (Medium)” and Style to “Sequential” if not already done</p>
+<p><img src="Media/Geospatial/Step9c.PNG"></p>
+<p>Finally, we head to the Dashboard and confirm that the animation is on by clicking on the Format tab on the Toolbar, selecting “Animations…” then check that it is on “On”</p>
+<p><img src="Media/Dashboard/Step5d.PNG" style="width:90%; display:block; margin:0 auto;"></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
