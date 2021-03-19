@@ -130,13 +130,34 @@ All in all, the costs to having a dynamic visualization in this context heavily 
 
 ### Discussion on Visualizing Changes
 
+Temporal plots are aplenty. Candlestick charts, Sunburst diagram, Horizon graph, Calendar Heatmap, or even the Animated Bubble Plot made famous by the Gapminder foundation and Hans Roslings in what is now his classic TED talk, are all examples of temporal plots that data scientists use to visualize change. 
+
+One of the most commonly used ones, though, is the line chart that we see in the original visualization. Such line charts are useful to depict seasonal, cyclical, outliers or even co-variation between different series. While the line charts are useful, it does become visually complicated when there are several lines altogether (and if the lines are separated by different panels and axes, it creates other problems such as those discussed in our critque of the original viz). When minor variations between two time periods are not of major concerns or interests, it may be beneficial to remove the complexity by visualizing only the general trend of the series without the volatility within. 
+
+Animation come easily to mind when talking about visualizing changes and depicting trends - recall the immortalized story of countries around the world escaping short-lives and poor health as we progress altogether on the income scale. However, as discussed in the section above, they are not without their shortcomings. In fact, one added "inadequacy" of a, say, Gapminder-style animated bubble plot a la Hans Rosling, is the fact that we are not comparing the change in one variable with another along time (i.e. bivariate temporal relationship) - for the purpose of this dataset, we are really interested in only an univariate temporal relationship of the count or fatality of conflict events with time. This is further vindicated by the earlier conclusion we had drawn on the fact that conflict events are more random and ad-hoc in nature, as compared to, for example, infant mortality or education rates.
+
+Another feasible and even simpler method is Slopegraphs. [Edmund Tufte](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk) explains that Slopegraphs "*compare changes usually over time for a list of nouns located on an ordinal or interval scale*". Tufte argues that the advantages of Slopegraphs are as follows:-
+
+- the two columns allows easy reference on how numbers in general have changed over the years;
+- the paired comparison allows readers to read down each line to identify how the variable has changed for each of the category/"noun" (in the case of this data set - each country). With added labels, the number associated with each of the nouns is also visibly displayed;
+- it shows how two "nouns" (i.e. countries) differ in their rates of change;
+- unusualy slope stands out from the overall patterns; and 
+- most importantly, the information is both integrated through the connected contents, and separated in that "*the eyes follows deveral different and uncluttered paths in looking over the data*". He argues that this allows organization of complex information hierarchically.
+
+In addition to the above, there is also very minimal (in fact, zero!) non-data ink involved. 
+
+Tufte's use of Slopegraph first came about in 1983, in his book [The Visual Display of Quantitative Information](https://www.amazon.com/gp/product/0961392142/ref=as_li_ss_tl?ie=UTF8&tag=charpark-20&linkCode=as2&camp=217145&creative=399369&creativeASIN=0961392142). [Andy Kirk](https://www.visualisingdata.com/2013/12/in-praise-of-slopegraphs/), in 2013, agrees with Tufte, concurring that slopegraph is the "*best way to visually expose the big stories*" between two contrasting time period, with Ben Jones adding on shortly after, providing a [how-to tutorial](https://dataremixed.com/2013/12/slopegraphs-in-tableau/), for which some of the methods used in this visualization were referenced from. 
+
+Charlie Park, in [his posts on 11 July 2011](https://charliepark.org/slopegraphs/), provided yet a very comprehensive list of various slopegraph-like visualization from the past, and compared them with other alternatives - in summary, his key points were that slope graphs are more layman-friendly than scatter plots and slopes are much easier to read, but caution must be given to use the same data type and units of measurement for both the left and and right sides, lest any force-ranking creates "*meaning where there might not actually be any*" (and hence misleads viewers). He ended off with a guide on when to use slopegraph - ***Basically: Any time you’d use a line chart to show a progression of univariate data among multiple actors over time, you might have a good candidate for a slopegraph.*** - this is exactly the situation we have here on hand! 
+
+Park then followed up with [another post](https://charliepark.org/a-slopegraph-update/#whiskerslopes) with a discussion on other examples of Slopegraphs and related types of visualization. One example is the Whiskerslopes, that includes a "revised box plot" on each axis. The added lines could better highlight the oddball values especially in dataset with large changes between the years as a whole; in the context of our visualization, however, the small number of countries plus the fact that the general shift in numbers are less systemic, it is less applicable and may add unnecessarily confusing non-data ink. Park also further added more best practices for the creation and visualization of Slopegraphs, which were taken into consideration and adopted where feasible by the author of this makeover. 
 
 
 ### Makeover Concept
 
 Taking in the points discussed above, a redesigned visualization could look like the following: 
 
-
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\concept.jpg">
 
 #### Addressing Clarity Issue
 
@@ -456,6 +477,17 @@ And finally, we include Tooltip by clicking on the Tooltip tab and making the ch
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step15.PNG" style="width:80%; display:block; margin:0 auto;">
 
+
+**Step 3.6 - Reducing Non-Data Ink**
+
+And before we go, we make an effort to reduce the non-data ink. Since we have the label for the count/fatality numbers, we do not really need the axes and the accompanying gridlines. We can proceed to remove them. Firstly, for the axes, we right-click on it, and uncheck the "Show Header" option
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step16.PNG" style="width:80%; display:block; margin:0 auto;">
+
+Next, we also remove the gridlines. First by right-clicking on the viz, then select the "Format" option - the left panel will change. Select the icon for gridlines, then change the Grid Lines and Zero Lines under the Rows pane to be None.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step17.PNG" style="width:80%; display:block; margin:0 auto;">
+
 We now have the final Slopegraph! 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\final.PNG">
@@ -524,7 +556,7 @@ We check that when the slope line for Myanmar on the temporal viz is selected, o
 
 To bring it a step further, we now want the dots to zoom in on a particular country when we click on one of the slope line. To do this, we click on the Slopegraph Worksheet, and then select the funnel icon to use the  temporal viz Worksheet as Filter.
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step5e.PNG" style="width:90%; display:block; margin:0 auto;">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step5k.PNG" style="width:90%; display:block; margin:0 auto;">
 
 And with that, we have the finalized visualization! 
 
