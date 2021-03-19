@@ -174,7 +174,7 @@ This section provides a step-by-step guide to recreate the redesgined visualizat
 
 ### Part 1 - Data Preparation
 
-**Step 1.1 - Importing Data** 
+**Step 1 - Importing Data** 
 
 After downloading the Southeast Asian 2010-2020 dataset, open up Tableau Desktop then drag-and-drop the downloaded Excel file onto a new tableau main page.
 
@@ -197,11 +197,13 @@ These variables are shifted to Dimension as their numerical values are codes rep
 
 ### Part 2 - Creating Interactive Geospatial Dot Density Plot with Proportional Symbols
 
+
 **Step 2.1 - Base Map** 
 
 The very first step to creating a geospatial visualization is to create a base map. The dataset conveniently came along with Longitudinal and Latitudinal data to map out where each of the conflict event happened; Tableau on the other hand, made it even easier by automatically recognizing that these variables have geographical role and assigned them to their correct lat-long meaning based on their name. We now drag the **Longitude** to Columns, and **Latitude** to Rows.
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step1.PNG">
+
 
 **Step 2.2 - Basic Dot Density Map** 
 
@@ -209,7 +211,8 @@ We create a basic dot density map by drag-and-dropping "**Event Id Cnty**"onto t
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step2.PNG">
 
-**Step 2.2 - Proportional Symbols** 
+
+**Step 2.3 - Proportional Symbols** 
 
 Knowing the type of events and their concentration in a particular geo-spatial location is informative - however, not all events are of equal concerns: while some of the dots denotes relatively "civilized" encounters (e.g. peaceful protests, arrests of key politicians without any casualties involved), some are way more violent (e.g. battles, explosions). In this aspect, the dataset provides an appropriate variable - the number of **Fatalities**. To show the relative impact of each event proxied by the number of people killed during the event, we drag-and-drop the measure Fatalities onto the Size tab - the size of each dot would then provide the relative destruction (in human-life terms) of each event: the bigger the circle, the more lives the event claimed (and hence more impactful), and the smaller the inverse, the lesser the impact. 
 
@@ -225,7 +228,7 @@ First we enlarge the circle by first clicking on the Size tab, then sliding the 
 
 Next, we reduce the opacity by first clicking on the Color tab, then change the Opacity to 50%. 
 
-**Step 2.3 - Interactivity - Filters**
+**Step 2.4 - Interactivity - Filters**
 
 ***Country***
 
@@ -254,7 +257,7 @@ Lastly, we string these two variables together to create variable **Actors** tha
 Similarly. we then drag-and-drop the Actors variable onto the Filter pane and change the type to Single Value (Dropdown). 
 
 
-**Step 2.4 - Aesthetics** 
+**Step 2.5 - Aesthetics** 
 
 **Map Background**
 
@@ -269,7 +272,7 @@ Next, we double click on the title to change it to the following.
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step11.PNG" style="width:80%; display:block; margin:0 auto;">
 
 
-**Step 2.4 - Tooltip**
+**Step 2.6 - Tooltip**
 
 We want viewers to be able to extract more information when they hover their mouse over - so we add in a customized Tooltip that can provide them just that. 
 
@@ -303,9 +306,13 @@ We now have an informative geospatial dot density map of conflict events with pr
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\final.PNG">
 
 
+*If reader is interested, steps to include Animation on the map for dynamic visualization - which is not recommended for the purpose of this dataset - is documented in the Annex* 
+
+
 ### Part 3 - Visualizing Change using Slopegraph 
 
 We next open up a new Worksheet to create the second portion of the overall viz visualizing change using the Slopegraph. 
+
 
 **Step 3.1 - Data Preparation & Variable Creation**
 
@@ -351,7 +358,6 @@ We then use Delta to find out the direction of movement of the numbers of confli
 
 ***First or Last***
 
-
 Finally, we create a variable called **First or Last** - this variable will be useful in allow us to show a line on the Slopegraph for only the starting and ending year; where either one is missing, the data point will only appear as a dot.
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step7.PNG" style="width:50%; display:block; margin:0 auto;">
@@ -367,17 +373,18 @@ But wait... this looks like a normal line graph and not slope graph! Recall earl
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step8a.PNG">
 
-Next, we go to the right hand panel where we find the "AGG(First or Last)" pane; we right-click on the False legend, and select "Hide" 
+Next, we go to the right hand panel where we find the "AGG(First or Last)" distribution pane; we right-click on the False legend, and select "Hide" 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step8b.PNG">
 
 This way, we should see the lines taking shape, with only two columns, one for the starting year, and one the ending. With this, we would also want viewers to be able to change the start and end year.
 
-**Step 3.3 - Year Filter**
 
-And that brings us to the creation of a Year filter. 
+**Step 3.3 - Time Filter**
 
-We first drag-and-drop the Event Date variable onto the Filter pane. A pop-up will appear - we select "Years" from the option list
+And that brings us to the creation of a Time filter. 
+
+We first drag-and-drop the Event Date variable onto the Filter pane. A pop-up will appear - we select "Years" from the option list (this is just for place-holding, we will change it to month later below, with explanations)
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9a.PNG">
 
@@ -385,17 +392,17 @@ Followed by checking the "Use all" option under the General tab, then click Ok.
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9b.PNG" style="width:40%; display:block; margin:0 auto;">
 
-We notice that the Year pill under the Filter pane is a dimension (blue pill). We click on the small triangle at the right-end of the blue pill, a list will pop up - we then select the date Year option as shown. The pill should turn green in color.
+We notice that the Year pill under the Filter pane is a dimension (blue pill). We click on the small triangle at the right-end of the blue pill, a list will pop up - we then select the date ***Month*** option as shown. Recall in earlier discussion in Section B, there is a need for more specific temporal filter to analyze changes for particular period of interest (e.g. from June 2016 onwards in the Philippines for President Duderte's term), hence, while we change the filter date type, we also  change to allow more in-depth, per-month analysis (instead of leaving it as Year). The pill should turn green in color.
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9c.PNG" style="width:40%; display:block; margin:0 auto;">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9f.PNG" style="width:40%; display:block; margin:0 auto;">
 
 A window will pop up, and we select the "Range of dates" option, leaving all the other settings unchanged.
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9d.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9h.PNG">
 
 Lastly, we click on the triangle at the right-end of the pill (this time green) again - check on "Show Filter" 
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9e.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9g.PNG">
 
 
 **Step 3.4 - Aesthetic Enhancement** 
@@ -442,6 +449,7 @@ Next, we change the title to something more accurate by double-clicking on the v
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step13c.PNG" style="width:80%; display:block; margin:0 auto;">
 
+
 **Step 3.5 - Tooltip** 
 
 And finally, we include Tooltip by clicking on the Tooltip tab and making the changes as follows (all variables needed should already be within the original Tooltip):
@@ -451,6 +459,7 @@ And finally, we include Tooltip by clicking on the Tooltip tab and making the ch
 We now have the final Slopegraph! 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\final.PNG">
+
 
 ### Part 4 - Interactive Dashboard
 
@@ -470,9 +479,10 @@ Similarly, we return to the Geospatial Worksheet and do the same to the **Actors
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step6.PNG" style="width:50%; display:block; margin:0 auto;">
 
+
 **Step 4.2 - Creating Dashboard**
 
-Now we commence with the creation of Dashboard by first clicking on the "New Dashboard" button at the borron of the viz (beside the Worksheet tabs).
+Now we commence with the creation of Dashboard by first clicking on the "New Dashboard" button at the botton of the viz (beside the Worksheet tabs).
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step0.PNG">
 
@@ -488,6 +498,18 @@ Rearrange the Filters and Parameters as such:
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step3.PNG">
 
+Amend the filter and legend to enhance clarity. For the Month and Year filter:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step7a.PNG" style="width:50%; display:block; margin:0 auto;">
+
+For the geospatial map color legend for event type: 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step7b.PNG" style="width:80%; display:block; margin:0 auto;">
+
+For the temporal slope graph color legend for direction of change: 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step7c.PNG" style="width:80%; display:block; margin:0 auto;">
+
 Add in Action to interlink the two sheets. First click on the Dashboard tab at the toolbar, then select "Actions..."
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step4c.PNG" style="width:60%; display:block; margin:0 auto;">
@@ -496,9 +518,18 @@ At the popped up window, select "Add Action >" then choose "Highlight". At the A
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step4d.PNG" style="width:80%; display:block; margin:0 auto;">
 
-And finally. we click on the Slopegraph Worksheet, and then select the funnel icon to use the Worksheet as Filter (so that when a country for a particular year is selected, the display on the map changes as well) 
+We check that when the slope line for Myanmar on the temporal viz is selected, only dots in Myanmar are highlighted to confirm the action is working. The converse is also true - when a dot in Myanmar is selected, only the Myanmar slope line should be highlighted. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step4e.PNG" style="width:90%; display:block; margin:0 auto;">
+
+To bring it a step further, we now want the dots to zoom in on a particular country when we click on one of the slope line. To do this, we click on the Slopegraph Worksheet, and then select the funnel icon to use the  temporal viz Worksheet as Filter.
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step5e.PNG" style="width:90%; display:block; margin:0 auto;">
+
+And with that, we have the finalized visualization! 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Final.PNG">
+
 
 
 ## Section E: Observations 
@@ -531,3 +562,5 @@ Next, go to the Format tab on the tool bar, select "Animation" from the drop-dow
 Finally, we head to the Dashboard and confirm that the animation is on by clicking on the Format tab on the Toolbar, selecting "Animations..." then check that it is on "On" 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step5d.PNG" style="width:90%; display:block; margin:0 auto;">
+
+Do note, though, that this method would also mean the viz is unable to show the full decade long data altogether (as each year is now a page on its own that is being automatically flipped by Tableau via the animation).
