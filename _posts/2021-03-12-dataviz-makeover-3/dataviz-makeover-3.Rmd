@@ -7,12 +7,12 @@ description: |
   
   Final redesigned visualization can be found on this link: 
   
-  https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover2_16133754027850/Dashboard
+  https://public.tableau.com/profile/jason.tey#!/vizhome/VizMakeover3/Dashboard
   
 author:
   - name: Jason Tey
     email: Jason.Tey.2020@mitb.smu.edu.sg
-date: 03-20-2021
+date: 03-21-2021
 output:
   distill::distill_article:
     toc: true
@@ -31,7 +31,7 @@ The original visualization using the data available is appended below:
 
 ## Section A: Critique of Original Viz 
 
-This section provides a critique of the original visualization and comments on both clarity and aesthetic aspects that could be further improved on. A total of **10 clarity issues** and **8 aesthetic issues** were identified. 
+This section provides a critique of the original visualization and comments on clarity, aesthetic, and interactivity aspects that could be further improved on. A total of **8 clarity issues**, **7 aesthetic issues** and **4 Interactivity issues** were identified. 
 
 ### Clarity
 
@@ -39,27 +39,33 @@ This section provides a critique of the original visualization and comments on b
 |-----|-------|------------------------------------------------------------------------------------|
 | 1   | Cluttered Opaque Dots | This is both an aesthetic and clarity issue - dots overlapping covers other underlying dots that may be overlooked as the dots appear to be 100% opaque, this means useful information is lost, and may even mislead viewers into thinking there are lesser conflicts than really were|
 | 2  | Missing Magnitude of Impact | While each dot represents one conflict event, not all events are of equal impact. A peaceful protest would likely have lesser impact in the form of lives lost than a battle, but even this is not always the case. It would be useful to also visualize the number of fatalities on the map to get a sense of the deadliness of the event.|
-| 3  | Year of Event | While the geospatial map plotted out the conflict locations, it does not offer the option to zoom in to individual year to see how situation developed through the years|
-| 4  | Titles | Titles for both the viz and the legend are accurate, which is commendable. However, more information could be provided (e.g. clarify how many events do each dot represents on the map; what is the unit of measure for the time series viz|
-| 5  | Confusing Repeated Color| Both the geospatial map and the time series viz uses the same shade of blue, together with the fact that the legend was placed beside the time series viz, at first glance, it appears as if the time series is only plotting changes for *Battles* events, which are denoted by the same shade of blue on the map. |
-| 6  | Axes for Time Series Viz| It is unclear what "Count of Sheet1" is referring to - what exactly is the count for and what is 'Sheet1'? |
-| 7  | Inconsistent Y-Axis scale| The Temporal viz in the trellis panes also differ from each other: from the counts for *Battles* from around 400 to 700 to the counts for *Riots* lesser than 20, they all look similar in scale. The changes are also exaggerated for those in smaller scales, distorting a realistic sense of comparison |
-| 8  | Non-Informative Viz | The time series viz, in itself, does not provide any informative insights, other than the actual changes in the count of each types of conflict event. There is no clear patterns or trends observed in the trellis view, and with the inconsistent Y-Axis, we cannot even formulate meaningful comparison between the event counts or comment much about the trends (since events with smaller counts would have flatter lines with more minute changes if the scales are aligned) |
-| 9   | Tooltip | Tooltip was left as default without proper phrasing and explanation on the values of the variables. Which does not help with enhancing the clarity of the two visualizations (viewers would not have very applicable use of the longitude and latitude information provided, for example). |
-| 10  | Source of Data| The source of data is mysteriously missing. This reduces the reliability of the data used (and could also get the viz producer into trouble, given the terms-and-condition for use of the data from ACLED) |
+| 3  | Uninformative Titles | Titles for both the viz and the legend are accurate, which is commendable. However, more information could be provided (e.g. clarify how many events do each dot represents on the map; what is the unit of measure for the time series viz|
+| 4  | Confusing Repeated Color| Both the geospatial map and the time series viz uses the same shade of blue, together with the fact that the legend was placed beside the time series viz, at first glance, it appears as if the time series is only plotting changes for *Battles* events, which are denoted by the same shade of blue on the map. |
+| 5  | Unclear Axes for Time Series Viz| It is unclear what "Count of Sheet1" is referring to, and what exactly is the count for and what 'Sheet1' is. |
+| 6  | Inconsistent Y-Axis scale| The Temporal viz in the trellis panes also differ from each other: from the counts for *Battles* from around 400 to 700 to the counts for *Riots* lesser than 20, they all look similar in scale. The changes are also exaggerated for those in smaller scales, distorting a realistic sense of comparison |
+| 7  | UnInformative Temporal Viz | The time series viz, in itself, does not provide any informative insights, other than the actual changes in the count of each types of conflict event. There is no clear patterns or trends observed in the trellis view, and with the inconsistent Y-Axis, we cannot even formulate meaningful comparison between the event counts or comment much about the trends (since events with smaller counts would have flatter lines with more minute changes if the scales are aligned) |
+| 8  | Missing Credit for Source of Data| The source of data is mysteriously missing. This reduces the reliability of the data used (and could also get the viz producer into trouble, given the terms-and-condition for use of the data from ACLED) |
 
 ### Aesthetic
 
 | S/N | Issue |Comments                                                                            |
 |-----|-------|------------------------------------------------------------------------------------|
 | 1   | Cluttered Opaque Dots | As mentioned earlier, this is both an aesthetic and clarity issue; apart from the lack of clarity, the cluttered dots also made it visually annoying when some dots are partially or fully hidden and it is difficult to pinpoint the exact event even when we attempt to hover over|
-| 2   | Map Background | Dark background for the land masses makes it less contrasting with the dots and the boundary lines |
-| 3   | Legend for Map | While the color scheme is meant for the geospatial map, it is placed far away, separated by the time series viz. Beyond confusing, it also requires viewers' eyes to track across the time series viz to see what color on the map corresponds to what event on the legend - viewers may even get distracted while doing that, or worse, frustrated. |
-| 4   | Y-Axis for Temporal Viz | Other than the fact that the inconsistent Y-Axiss distort the sense of comparison, it is also ugly when there are different "gaps" between the tick marks. More critically, the repeated "Count of Sheet1" in itself is redundant, it could have been combined together as one. And lastly, the orientation of the "Count of Sheet1" means viewers have to tilt their head to read it - not as user friendly. | 
+| 2   | OVerly-striking Map Background | Dark background for the land masses makes it less contrasting with the dots and the boundary lines |
+| 3   | Inappropriate Placement of Legend for Map | While the color scheme is meant for the geospatial map, it is placed far away, separated by the time series viz. Beyond confusing, it also requires viewers' eyes to track across the time series viz to see what color on the map corresponds to what event on the legend - viewers may even get distracted while doing that, or worse, frustrated. |
+| 4   | Ugly Y-Axis for Temporal Viz | Other than the fact that the inconsistent Y-Axiss distort the sense of comparison, it is also ugly when there are different "gaps" between the tick marks. More critically, the repeated "Count of Sheet1" in itself is redundant, it could have been combined together as one. And lastly, the orientation of the "Count of Sheet1" means viewers have to tilt their head to read it - not as user friendly. | 
 | 5   | Lack of Grid Lines | There is also a lack of vertical grid lines to help guide viewers to map the count values to the years.  |
 | 6   | X-Axis Abruptly Cut-Off | X-Axis of the time series viz is cut-off at the end, with the year '*2020*' appearing chopped up.|
-| 7   | Lack of Interactivity | Other than the toggling of Country, the viz does not allow changing other variables such as Actors involved or the type of conflict event.|
-| 8   | Proportion of the Visualizations | The geospatial map takes up half the canvas, whereas the temporal viz had to share real estate with the legend and filter - this makes the overall visualization appear lopsided. | 
+| 7   | Disproportion of the Visualizations | The geospatial map takes up half the canvas, whereas the temporal viz had to share real estate with the legend and filter - this makes the overall visualization appear lopsided. | 
+
+### Interactivity 
+
+| S/N | Issue |Comments                                                                            |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1  | Unable to Toggle Year of Event | While the geospatial map plotted out the conflict locations, it does not offer the option to zoom in to individual year to see how situation developed through the years|
+| 2   | Uninformative Tooltip | Tooltip was left as default without proper phrasing and explanation on the values of the variables. Which does not help with enhancing the clarity of the two visualizations (viewers would not have very applicable use of the longitude and latitude information provided, for example). |
+| 3   | Lack of Interactivity | Other than the toggling of Country, the viz does not allow changing other variables such as Actors involved or the type of conflict event.|
+| 4   | Unable to Have Reactive Response to Selected Data | When data on one viz (especially the temporal viz) is selected, the other visualization does not highlight the corresponding data (e.g. when Myanmar is selected on the temporal viz, the geospatial vis does not highlight only the Myanmar dots|
 
 ## Section B: Suggested Improvement
 
@@ -69,16 +75,14 @@ This section provides some suggested improvements that could be implemented to r
 
 | S/N | Issue | Suggested Improvement                                                       |
 |-----|-------|-----------------------------------------------------------------------------|
-| 1   | Cluttered Opaque Dots | Increase the alpha / Decrease the opacity of the dots, so as to allow overlapped dots to be visible |
+| 1  | Cluttered Opaque Dots | Increase the alpha / Decrease the opacity of the dots, so as to allow overlapped dots to be visible |
 | 2  | Missing Magnitude of Impact | Incorporate the Fatalities numbers as one of the variables in the visualization. In this case, it will be a multiple-variable visualization, where dot can continue to represent one event count, color as the event type, and size as the deadliness / number of fatalities|
-| 3  | Year of Event | Create additional filters to allow toggling of year. In fact, to better visualize changes, animation may be considered. |
-| 4  | Titles | Include subtitles to better inform viewers of the visualization that they are looking at, especially key critical information, such as what each dot on the map represents.|
-| 5  | Confusing Repeated Color| Avoid using repeated color to represent elements of totally different nature to prevent unnecessary confusion. |
-| 6  | Axes for Time Series Viz| Provide clear axes title to make sure viewers are able to identify with the data being presented. Unit of measure should also be specified if need be.|
-| 7  | Inconsistent Y-Axis scale| Axes in trellis panes should be consistent as much as possible to aid comparison. If not possible, alternative presentation approaches should be explored |
-| 8  | Non-Informative Viz | The trellis pane viz does not have any value-add in the story told - perhaps a simple get-around is to just put all the different types in on continuous axis and differentiate the lines by different colors (consistent with what is on the map). However, authors should be mindful of the story they are interested to tell - if the changes within two particular years are not important to the viewer (i.e. how the lines change), having many kinks in the line creates more confusion. In this case, since conflict events are more ad-hoc in nature, it is more likely for viewers to be interested to know how the numbers changed from one timeframe to another (e.g. 2010 to 2020), instead of all the changes in between. A slopegraph would provide that clearer picture without additional encumbrances. If user really wants to, an option to change the start and end year may be provided to allow users to toggle between the start and end timeframe that they wish to look at. |
-| 9   | Tooltip | Tooltip provides a good opportunity to better inform viewers of the story behind each data point, and should be put to good use. |
-| 10  | Source of Data| Include a source note to credit data owner! |
+| 3  |  Uninformative Titles | Include subtitles to better inform viewers of the visualization that they are looking at, especially key critical information, such as what each dot on the map represents.|
+| 4  | Confusing Repeated Color| Avoid using repeated color to represent elements of totally different nature to prevent unnecessary confusion. |
+| 5  | Unclear Axes for Time Series Viz| Provide clear axes title to make sure viewers are able to identify with the data being presented. Unit of measure should also be specified if need be.|
+| 6  | Inconsistent Y-Axis scale| Axes in trellis panes should be consistent as much as possible to aid comparison. If not possible, alternative presentation approaches should be explored |
+| 7  | UnInformative Temporal Viz | The trellis pane viz does not have any value-add in the story told - perhaps a simple get-around is to just put all the different types in on continuous axis and differentiate the lines by different colors (consistent with what is on the map). However, authors should be mindful of the story they are interested to tell - if the changes within two particular years are not important to the viewer (i.e. how the lines change), having many kinks in the line creates more confusion. In this case, since conflict events are more ad-hoc in nature, it is more likely for viewers to be interested to know how the numbers changed from one timeframe to another (e.g. 2010 to 2020), instead of all the changes in between. A slopegraph would provide that clearer picture without additional encumbrances. If user really wants to, an option to change the start and end year may be provided to allow users to toggle between the start and end timeframe that they wish to look at. |
+| 8  | Missing Credit for Source of Data| Include a source note to credit data owner! |
 
 
 ### Aesthetic
@@ -86,24 +90,31 @@ This section provides some suggested improvements that could be implemented to r
 | S/N | Issue | Suggested Improvements                                                             |
 |-----|-------|------------------------------------------------------------------------------------|
 | 1   | Cluttered Opaque Dots | Increase the alpha / Decrease the opacity of the dots, so as to allow overlapped dots to be visible |
-| 2   | Map Background | Reduce the washout of the background map |
-| 3   | Legend for Map | Place legends where they are easy to be referred by viewers. Legends are meant to enlighten, not create more confusion. |
-| 4   | Y-Axis for Temporal Viz | Make sure axes are consistent and tick marks evenly spaced out. Titles should also be horizontally oriented to reduce the need for uncomfortable head-tilts. Bottomline is: elements that are not useful in improving the story the viz is telling should be removed.| 
+| 2   | OVerly-striking  Map Background | Reduce the washout of the background map |
+| 3   | Inappropriate Placement of Legend for Map | Place legends where they are easy to be referred by viewers. Legends are meant to enlighten, not create more confusion. |
+| 4   | Ugly Y-Axis for Temporal Viz | Make sure axes are consistent and tick marks evenly spaced out. Titles should also be horizontally oriented to reduce the need for uncomfortable head-tilts. Bottomline is: elements that are not useful in improving the story the viz is telling should be removed.| 
 | 5   | Lack of Grid Lines | If need be, grid lines or point dots should be provided to guide viewers track the data points along the x and y axes. Or, clever redesigning of the viz can be done to side-step the issue by removing the need for guiding grid lines (hint: perhaps we do not need all the years on the x-axis)|
 | 6   | X-Axis Abruptly Cut-Off | Make sure axes marks are properly spaced out and visible; if needed, ensure flexibility is incorporated to allow viewers to change the size according to the size of their screen (in Tableau, change the view to "Entire View"). |
-| 7   | Lack of Interactivity | Include other variables as filters/parameters to better aid users/viewers decipher and gain insights from the visualization|
-| 8   | Proportion of the Visualizations | Ensure real estate of the dashboard is maximized and visualizations are evenly-spaced and proportionate to one another | 
+| 7   | Disproportion of the Visualizations | Ensure real estate of the dashboard is maximized and visualizations are evenly-spaced and proportionate to one another | 
 
+### Interactivity
+
+| S/N | Issue | Suggested Improvements                                                                             |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1   | Unable to Toggle Year of Event | Create additional filters to allow toggling of year. In fact, to better visualize changes, animation may be considered.|
+| 2   | Uninformative Tooltip | Tooltip provides a good opportunity to better inform viewers of the story behind each data point, and should be put to good use. |
+| 3   | Lack of Interactivity | Include other variables as filters/parameters to better aid users/viewers decipher and gain insights from the visualization|
+| 4   | Unable to Have Reactive Response to Selected Data | Include reactive response to allow selected data to highlight on the other visualization |
 
 ### Discussion on Geospatial Visualization 
 
-There are several commonly-used geospatial visualization techniques available, these include Cartograms, Choropleth maps, Proportional Symbols, and Dot Density Maps. The original viz adopted the latter technique. Amongst them, the former (Cartograms) is the least popular, as "[their use if oten more for their thratrical value (i.e. to grab the attention of an audience) and less for their ability to help folks understand subtle details of geographic datasets](http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/cartograms/)"
+There are several commonly-used geospatial visualization techniques available, these include Cartograms, Choropleth maps, Proportional Symbols, and Dot Density Maps. The original viz adopted the latter technique. Amongst them, the former (Cartograms) is the least popular, as "[their use is often more for their theatrical value (i.e. to grab the attention of an audience) and less for their ability to help folks understand subtle details of geographic datasets](http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/cartograms/)"
 
-The dot density maps is useful in showing "[diferences in georaphic distributions across a landscape](http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/dot-density/)". In the original viz, a one-to-one dot densioty map (one dot represents one count) is used. The dot density map has the following advantages:- 
+The dot density maps is useful in showing "[diferences in georaphic distributions across a landscape](http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/dot-density/)". In the original viz, a one-to-one dot density map (one dot represents one count) is used. The dot density map has the following advantages:- 
 
-1. raw data and simple counts or rates/ratio can all be mapped (as opposed to [Choropleth maps](http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/choropleth/) which requires the latter)
-2. data need not be tied to enumeration units (that is, it does not require the variable of interest to be conceptually measurable anywhere in space)
-3. it works fine with black and white when color is not an option (and if color is available, it can be used to represent other variable of interest)
+1. Raw data and simple counts or rates/ratio can all be mapped (as opposed to [Choropleth maps](http://www.axismaps.com.s3-website-us-east-1.amazonaws.com/guide/univariate/choropleth/) which requires the latter)
+2. Data need not be tied to enumeration units (that is, it does not require the variable of interest to be conceptually measurable anywhere in space)
+3. It works fine with black and white when color is not an option (and if color is available, it can be used to represent other variable of interest)
 
 Points 1 and 2 are particularly important considerations in the context of our visualization - to visualize incidence of conflict events, further processing of the data (e.g. divide it by the population) would be required in order to adopt the Choropleth technique. Point 3 is an added bonus (given that Tableau has color functions available), since a Choropleth will rely on colors to represent the incidence of conflict event (in this case, potentially event per population), it loses the option to add on another dimension that a dot density map allows using color. In this case, one plausible measure to include, is the type of conflict event. In this case, each dot not only tells us that a conflict occur, but can very intuitively inform us whether it is a protest or a battle. 
 
@@ -111,19 +122,19 @@ In fact, proportional symbols may be added onto the dot density map (in fact, it
 
 In parallel, this is also one major limitation of dot density maps - they are terrible for retrieving numbers from the map, people are generally not patient in manually counting the number of dots in a region to derive the total number of events in the particular region. Similarly, the purpose of the visualization is to give a broad overview of the concentration of a particular conflict type geographically, to extract further detail, useful Tooltips would need to be added. To extract the total number of conflict in the country for the selected years, a complementary viz would be needed (see Discussion on Visualizing Changes below).
 
-In conclusion, a dot density map with each dot representing one event, the color of the dot representing the event type, and the size of the dot representing the number of fatalities, with appropriate filters for users to toggle would serve the visualization objective of this makeover. 
+In conclusion, a ***dot density map*** with each dot representing one event, the color of the dot representing the event type, and the size of the dot representing the number of fatalities, with appropriate filters for users to toggle would serve the visualization objective of this makeover. 
 
 ### Further Discussion on Animating Changes on Geospatial Visualization 
 
-According to [Daassi, Nigay & Fauvet (2005)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.122.8704&rep=rep1&type=pdf), Ed Chi's Visualization Process are structured into four steps, "namely: (1) data, (2) point of view of the data, (3) visualization space and (4) point of view on the visualization space." Temporal data visualization can be classified based on the different anchoring points between the visualization processes of the temporal domain (i.e. the time element), and the structural domain (i.e. the factor/variable that we are interested in). Hence, the author's taxonomy are categorised into four main groups, based on the anchoring point between the temporal and structural domains at the four different steps as described at the start of this paragraph. The authors, however, does not explicitly discuss the merits and shortcomings of each of these visualization frames. 
+According to [Daassi, Nigay & Fauvet (2005)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.122.8704&rep=rep1&type=pdf), Ed Chi's Visualization Process are structured into four steps, "namely: (1) data, (2) point of view of the data, (3) visualization space and (4) point of view on the visualization space." Temporal data visualization can be classified based on the different anchoring points between the visualization processes of the temporal domain (i.e. the time element), and the structural domain (i.e. the factor/variable that we are interested in). Hence, the author's taxonomy are categorized into four main groups, based on the anchoring point between the temporal and structural domains at the four different steps as described at the start of this paragraph. The authors, however, does not explicitly discuss the merits and shortcomings of each of these visualization frames. 
 
 The authors, however, did provided a further discussion on the difference between static and dynamic techniques. Dynamic techniques, as defined by the authors, have visual representation that changes automatically, and animation is frequently used to visualize spatio-temporal data. Static techniques, on the other hand, does not change automatically over time. The author of this makeover explored both the static and dynamic techniques with the existing data on hand. 
 
 In the exploration of the two models, one trade-off became apparent: dynamic animation allows for viewers to appreciate the shifts in patterns (in this case, location and deadliness of conflict events) without the need for manual toggling; however, in exchange, viewers surrender the autonomy to explore the data on their own terms. In the context of the subject ACLED dataset, with the Year set as the animating factor (i.e. for the viz to dynamically move forward through the years), viewers will not have the option to view the distribution for other time period beyond the yearly frame. In the context of conflict that can drag on through different years and for length of more than years (or decades, for the matter), having the temporal frame fixed at one calendar year may compromise on contextual nuances. 
 
-Furthermore, the benefit to having the changes dynamically animated is not strong in the context of conflict events, which occurrences are more ad hoc in nature than other events, such as child mortality or basic education, where changes in their rates are more meaningfully tracked through its temporal progression. In contrast, conflict events are more "opportunistic" - indeed, they may increase or decrease through particular periods of interest, but these are consequently also periods of particular interest - it is unlikely for people to be interested in knowing the number of conflict events in Singapore between 2010 to 2020 simply because it is not a period of any particular interest. Conversely, it is interesting to know the number of conflict events, say, in the Phiippines from Jun 2016, when President Rodrigo Duterte assumed office and declared its "war on drgs" - this is a particular period  because it is of particular interest (versus infant mortality rate or education rate, which is more actively tracked and hence the changes year-on-year is more meaningfully analysed). 
+Furthermore, the benefit of having the changes dynamically animated is not strong in the context of conflict events, which occurrences are more ad hoc in nature than other events, such as child mortality or basic education, where changes in their rates are more meaningfully tracked through its temporal progression. In contrast, conflict events are more "opportunistic" - indeed, they may increase or decrease through particular periods of interest, but these are consequently also periods of particular interest - it is unlikely for people to be interested in knowing the number of conflict events in Singapore between 2010 to 2020 simply because it is not a period of any particular interest. Conversely, it is interesting to know the number of conflict events, say, in the Phiippines from Jun 2016, when President Rodrigo Duterte assumed office and declared its "war on drgs" - this is a particular period  because it is of particular interest (versus infant mortality rate or education rate, which is more actively tracked and hence the changes year-on-year is more meaningfully analysed). 
 
-All in all, the costs to having a dynamic visualization in this context heavily outweighs its benefits. While the author has made an attempt to incorporate an animated dynamic visualization, the eventual decision is for the dynamic model with appropriate filters that allow users to toggle for the time period that they wish to examine freely to be adopted. 
+All in all, the ***costs to having a dynamic visualization in this context heavily outweighs its benefits***. While the author has made an attempt to incorporate an animated dynamic visualization, the eventual decision is for a static model with appropriate filters that allow users to toggle for the time period that they wish to examine freely to be adopted. 
 
 ### Discussion on Visualizing Changes
 
@@ -133,12 +144,12 @@ One of the most commonly used ones, though, is the line chart that we see in the
 
 Animation come easily to mind when talking about visualizing changes and depicting trends - recall the immortalized story of countries around the world escaping short-lives and poor health as we progress altogether on the income scale. However, as discussed in the section above, they are not without their shortcomings. In fact, one added "inadequacy" of a, say, Gapminder-style animated bubble plot a la Hans Rosling, is the fact that we are not comparing the change in one variable with another along time (i.e. bivariate temporal relationship) - for the purpose of this dataset, we are really interested in only an univariate temporal relationship of the count or fatality of conflict events with time. This is further vindicated by the earlier conclusion we had drawn on the fact that conflict events are more random and ad-hoc in nature, as compared to, for example, infant mortality or education rates.
 
-Another feasible and even simpler method is Slopegraphs. [Edmund Tufte](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk) explains that Slopegraphs "*compare changes usually over time for a list of nouns located on an ordinal or interval scale*". Tufte argues that the advantages of Slopegraphs are as follows:-
+Another feasible and even simpler method is ***Slopegraphs***. [Edmund Tufte](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk) explains that Slopegraphs "*compare changes usually over time for a list of nouns located on an ordinal or interval scale*". Tufte argues that the advantages of Slopegraphs are as follows:-
 
 - the two columns allows easy reference on how numbers in general have changed over the years;
 - the paired comparison allows readers to read down each line to identify how the variable has changed for each of the category/"noun" (in the case of this data set - each country). With added labels, the number associated with each of the nouns is also visibly displayed;
 - it shows how two "nouns" (i.e. countries) differ in their rates of change;
-- unusualy slope stands out from the overall patterns; and 
+- unusual slope stands out from the overall patterns; and 
 - most importantly, the information is both integrated through the connected contents, and separated in that "*the eyes follows deveral different and uncluttered paths in looking over the data*". He argues that this allows organization of complex information hierarchically.
 
 In addition to the above, there is also very minimal (in fact, zero!) non-data ink involved. 
@@ -160,16 +171,14 @@ Taking in the points discussed above, a redesigned visualization could look like
 
 | S/N | Issue | Ways in which proposed viz resolve issues identified                                                             |
 |-----|-------|------------------------------------------------------------------------------------|
-| 1   | Cluttered Opaque Dots | Visualization has appropriate opacity to reduce visual cluttering. Appropriate filters (e.g. year/month, event type) also allow viewers to distill insights based on specific requirements where dots will appear even less cluttered while better achieving viewer's objective  |
+| 1  | Cluttered Opaque Dots | Visualization has appropriate opacity to reduce visual cluttering. Appropriate filters (e.g. year/month, event type) also allow viewers to distill insights based on specific requirements where dots will appear even less cluttered while better achieving viewer's objective  |
 | 2  | Missing Magnitude of Impact | Inclusion of Fatality numbers as one additional dimension, taking on the size element, allows the magnitude of impact (or deadliness) of the event to be visualized. peaceful protests and deadly clashes will no longer appear as similar dots. |
-| 3  | Year of Event | While animation is rejected based on earlier discussions above, the inclusion of year, and, in fact, month filter, allows viewers to zoom in on specific timeframe of interest |
-| 4  | Titles | Titles amended with subtitles included to provide additional critical information about the viz, and hence enhance overall clarity of data presented|
-| 5  | Confusing Repeated Color| colors are purposefully chosen and appropriately applied, with repetition avoided as much as possible |
-| 6  | Axes for Time Series Viz| Axes, if provided, should be useful with clear labels and unit of measurement - however, in the case of the slopegraph where labels and measure are presented directly at the start and end of the line, axes are less useful and contributes to redundant non-data ink that may instead confuse, not enlighten, viewers. |
-| 7  | Inconsistent Y-Axis scale| Notwithstanding the fact that axes were removed, the trellis layout was altogether revamoped to merge the lines (showing just overall changes between two period) onto one common axes, so as to reduce inconsistency in scale when making comparison across country/event types (difference in event types can be found using the filters).|
-| 8  | Non-Informative Viz | Line chart was changed to slopegraph for a more informative visualization - more discussion on how it is more informative can be found above. |
-| 9   | Tooltip | Useful tooltips provided in both viz |
-| 10  | Source of Data| Source of data incorporated to add robustness and completeness, while also prevent infringement of intelletual property rights (we read the T&C!) |
+| 3  |  Uninformative Titles | Titles amended with subtitles included to provide additional critical information about the viz, and hence enhance overall clarity of data presented|
+| 4  | Confusing Repeated Color| colors are purposefully chosen and appropriately applied, with repetition avoided as much as possible |
+| 5  | Unclear Axes for Time Series Viz| Axes, if provided, should be useful with clear labels and unit of measurement - however, in the case of the slopegraph where labels and measure are presented directly at the start and end of the line, axes are less useful and contributes to redundant non-data ink that may instead confuse, not enlighten, viewers. |
+| 6  | Inconsistent Y-Axis scale| Notwithstanding the fact that axes were removed, the trellis layout was altogether revamped to merge the lines (showing just overall changes between two period) onto one common axes, so as to reduce inconsistency in scale when making comparison across country/event types (difference in event types can be found using the filters).|
+| 7  | UnInformative Temporal Viz | Line chart was changed to slopegraph for a more informative visualization - more discussion on how it is more informative can be found above. |
+| 8  | Missing Credit for Source of Data| Source of data incorporated to add robustness and completeness, while also prevent infringement of intellectual property rights (we read the T&C!) |
 
 
 #### Addressing Aethetic Issue
@@ -177,14 +186,21 @@ Taking in the points discussed above, a redesigned visualization could look like
 | S/N | Issue | Ways in which proposed viz resolve issues identified |
 |-----|-------|------------------------------------------------------------------------------------|
 | 1   | Cluttered Opaque Dots | Opacity decreased|
-| 2   | Map Background | Washout of background map reduced |
-| 3   | Legend for Map | Lengends appropriately placed and titled to prevent confusion |
-| 4   | Y-Axis for Temporal Viz | Axes removed with labels and numbers directly applied on start/end of lines| 
+| 2   | OVerly-striking  Map Background | Washout of background map reduced |
+| 3   | Inappropriate Placement of Legend for Map | Legends appropriately placed and titled to prevent confusion |
+| 4   | Ugly Y-Axis for Temporal Viz | Axes removed with labels and numbers directly applied on start/end of lines| 
 | 5   | Lack of Grid Lines | Grid Lines removed with only 2 points on X-axis remaining (i.e. start and end year) |
 | 6   | X-Axis Abruptly Cut-Off | All elements properly spaced out in the entire view, with automatic re-sizing of the viz . |
-| 7   | Lack of Interactivity | Variables as filters/parameters included to better aid users/viewers decipher and gain insights from the visualization|
-| 8   | Proportion of the Visualizations | Rreal estate of the dashboard is maximized and visualizations are evenly-spaced and proportionate to one another | 
+| 7   | Disproportion of the Visualizations | Real estate of the dashboard is maximized and visualizations are evenly-spaced and proportionate to one another | 
 
+#### Addressing Interactivity Issues
+
+| S/N | Issue | Ways in which proposed viz resolve issues identified                                                         |
+|-----|-------|------------------------------------------------------------------------------------|
+| 1   | Unable to Toggle Year of Event | While animation is rejected based on earlier discussions above, the inclusion of year, and, in fact, month filter, allows viewers to zoom in on specific timeframe of interest|
+| 2   | Uninformative Tooltip | Useful tooltips provided in both viz |
+| 3   | Lack of Interactivity | Variables as filters/parameters included to better aid users/viewers decipher and gain insights from the visualization|
+| 4   | Unable to Have Reactive Response to Selected Data | Reactive response to allow selected data to highlight on the other visualization is included. In fact, the temporal slopegraph viz is used as a filter to allow the geospatial map to zoom into a particular country when the country is seleced in the temporal viz. |
 
 ## Section C: Redesigned Visualization
 
@@ -197,7 +213,7 @@ The redesigned visualization can also be accessed via [this link](https://public
 
 ## Section D: Step-by-Step for Viz Makeover 
 
-This section provides a step-by-step guide to recreate the redesgined visualization. 
+This section provides a step-by-step guide to recreate the re-desgined visualization. 
 
 ### Part 1 - Data Preparation
 
@@ -207,7 +223,7 @@ After downloading the Southeast Asian 2010-2020 dataset, open up Tableau Desktop
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Step1.PNG">
 
-We can leave most of the data as-is, since they are relatively clean. We proceed to open up a new Worksheet in Tableau. Once that is done, we will quickly realise that Tableau automatically classified many of the numerical variables as Measures. We will need to shift these to become Dimensions. click on the following Measures while holding down the Ctrl key:-
+We can leave most of the data as-is, since they are relatively clean. We proceed to open up a new Worksheet in Tableau. Once that is done, we will quickly realize that Tableau automatically classified many of the numerical variables as Measures. We will need to shift these to become Dimensions. click on the following Measures while holding down the Ctrl key:-
 
 - Event Id No Cnty
 - Geo Precision
@@ -234,14 +250,14 @@ The very first step to creating a geospatial visualization is to create a base m
 
 **Step 2.2 - Basic Dot Density Map** 
 
-We create a basic dot density map by drag-and-dropping "**Event Id Cnty**"onto the Detail tab. As with any one-to-one dot density map, each of the resulting dot represents one count of the variable - in this case, a conflict event. We further enhance the map by introducing another variable - "**Event Type**" - onto the Color tab. This added dimension allows viewers to identify the type of event (e.g. Battle, Protest, Riot) associated with each event. 
+We create a basic dot density map by drag-and-dropping **Event Id Cnty** onto the Detail tab. As with any one-to-one dot density map, each of the resulting dot represents one count of the variable - in this case, a conflict event. We further enhance the map by introducing another variable - **Event Type** - onto the Color tab. This added dimension allows viewers to identify the type of event (e.g. Battle, Protest, Riot) associated with each event. 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step2.PNG">
 
 
 **Step 2.3 - Proportional Symbols** 
 
-Knowing the type of events and their concentration in a particular geo-spatial location is informative - however, not all events are of equal concerns: while some of the dots denotes relatively "civilized" encounters (e.g. peaceful protests, arrests of key politicians without any casualties involved), some are way more violent (e.g. battles, explosions). In this aspect, the dataset provides an appropriate variable - the number of **Fatalities**. To show the relative impact of each event proxied by the number of people killed during the event, we drag-and-drop the measure Fatalities onto the Size tab - the size of each dot would then provide the relative destruction (in human-life terms) of each event: the bigger the circle, the more lives the event claimed (and hence more impactful), and the smaller the inverse, the lesser the impact. 
+Knowing the type of events and their concentration in a particular geo-spatial location is informative - however, not all events are of equal concerns: while some of the dots denotes relatively "civilized" encounters (e.g. peaceful protests, arrests of key politicians without any casualties involved), some are way more violent (e.g. battles, explosions). In this aspect, the dataset provides an appropriate variable - the number of **Fatalities**. To show the relative impact of each event proxied by the number of people killed during the event, we drag-and-drop the measure Fatalities onto the Size tab - the size of each dot would then provide the relative destruction (in human-life terms) of each event: the bigger the circle, the more lives the event claimed (and hence more impact), and the smaller the inverse, the lesser the impact. 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step4.PNG">
 
@@ -263,9 +279,9 @@ Notice that we have also included **Country** as a Filter (by drag-and-dropping 
 
 ***Event Type***
 
-We do the same to "**Event Type**". Then we change both of these filters into Single Value (Dropdown) list.
+We do the same to **Event Type**. Then we change both of these filters into Multiple Values (Dropdown) list.
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step5.PNG">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step5c.PNG">
 
 ***Actors***
 
@@ -281,7 +297,7 @@ Lastly, we string these two variables together to create variable **Actors** tha
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Step4c.PNG" style="width:60%; display:block; margin:0 auto;">
 
-Similarly. we then drag-and-drop the Actors variable onto the Filter pane and change the type to Single Value (Dropdown). 
+Similarly. we then drag-and-drop the Actors variable onto the Filter pane and change the type to Multiple Values (Dropdown). 
 
 
 **Step 2.5 - Aesthetics** 
@@ -303,7 +319,7 @@ Next, we double click on the title to change it to the following.
 
 We want viewers to be able to extract more information when they hover their mouse over - so we add in a customized Tooltip that can provide them just that. 
 
-First, we create a new field that forms proper phrases with the parties involved - "**Actors_in_phrase**".
+First, we create a new field that forms proper phrases with the parties involved - **Actors_in_phrase**.
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\Step10.PNG" style="width:70%; display:block; margin:0 auto;">
 
@@ -333,7 +349,7 @@ We now have an informative geospatial dot density map of conflict events with pr
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Geospatial\final.PNG">
 
 
-*If reader is interested, steps to include Animation on the map for dynamic visualization - which is not recommended for the purpose of this dataset - is documented in the Annex* 
+*If reader is interested, steps to include Animation on the map for dynamic visualization - which is not recommended for the purpose of this data viz - is documented in the Annex* 
 
 
 ### Part 3 - Visualizing Change using Slopegraph 
@@ -396,7 +412,7 @@ To create a basic Slopegraph, drag-and-drop the **Event Date** dimension to Colu
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step5.PNG">
 
-But wait... this looks like a normal line graph and not slope graph! Recall earlier we mentioned the need to include the **First or Last** variable, now is the time. We drag-and-drop it onto the Size tab.
+But wait... this looks like a normal line graph (that is rather messy) and nothing like slope graph! Recall earlier we mentioned the need to include the **First or Last** variable, now is the time. We drag-and-drop it onto the Size tab.
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step8a.PNG">
 
@@ -421,7 +437,7 @@ Followed by checking the "Use all" option under the General tab, then click Ok.
 
 We notice that the Year pill under the Filter pane is a dimension (blue pill). We click on the small triangle at the right-end of the blue pill, a list will pop up - we then select the date ***Month*** option as shown. Recall in earlier discussion in Section B, there is a need for more specific temporal filter to analyze changes for particular period of interest (e.g. from June 2016 onwards in the Philippines for President Duderte's term), hence, while we change the filter date type, we also  change to allow more in-depth, per-month analysis (instead of leaving it as Year). The pill should turn green in color.
 
-<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9f.PNG" style="width:40%; display:block; margin:0 auto;">
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Temporal\Step9f.PNG" style="width:80%; display:block; margin:0 auto;">
 
 A window will pop up, and we select the "Range of dates" option, leaving all the other settings unchanged.
 
@@ -564,6 +580,30 @@ To bring it a step further, we now want the dots to zoom in on a particular coun
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step5k.PNG" style="width:90%; display:block; margin:0 auto;">
 
+We include one more additional information: the total number of conflict events or fatalities for the period selected. We first open up a new worksheet, drag-and-drop the **Event Date** onto the column, **Selected** field onto the Rows, **First or Last** onto Filters, then under the "Show Me" tab, select the data table option. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step8a.PNG">
+
+On the filter tab, uncheck "False" for the First or Last filter. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step8b.PNG" style="width:90%; display:block; margin:0 auto;">
+
+We make an edit to the title to give it a proper name
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step8c.PNG" style="width:60%; display:block; margin:0 auto;">
+
+We right-click on the title, select the Hide Field Labels for Columns to hide away the Column field label, which is not needed. Remember to also select "Entire View" for the view. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step8d.PNG" style="width:80%; display:block; margin:0 auto;">
+
+We also high away the column header by right-clicking the header then uncheck the "Show Header" option
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Step8e.PNG" style="width:90%; display:block; margin:0 auto;">
+
+Back at the dashboard, we drag-and-drop the Sheet (here named "Number") onto the bottom of the Slopgraph. Make the necessary re-sizing of the container as follows: 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Ste9k.PNG" style="width:90%; display:block; margin:0 auto;">
+
 And with that, we have the finalized visualization! 
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\Dashboard\Final.PNG">
@@ -572,7 +612,7 @@ And with that, we have the finalized visualization!
 
 ## Section E: Observations 
 
-### Observation 1 - Protests are everywhere within the region, but Battles are the most deadly
+### Observation 1 - Protests are everywhere within the region
 
 From the geospatial map, one key observation is that Protests (in red colors) are dotted around the region with almost every country visible having some red dots somewhere within its boundaries. 
 
@@ -582,9 +622,16 @@ One visible exception, though, is the military crackdown on ethnic Hmong Christi
 
 <img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob2.PNG">
 
-Battles (in blue dots), on the other hand, are less widely-spread within the region, and is more commonly-seen in only Myanmar and the Philippines in the last decade. However, dots representing battles are visibly much bigger in size than any other colors (Event Types) - that is, many of these individual battle events are very deadly. 
+One interesting observation about the protests: for Vietnam, Indonesia, and Malaysia, many of the red dots (protest events) can be found along the coastal area. This is likely due to the fact that civilizations are more likely to start from areas with water sources or coastal areas, and these areas are today more likely to be areas with economic and social weights (e.g. special economic zones, administrative capital, seat of government, or heritage city)
 
-Even while the battle events concentrates only in Myanmar and the Philippines, there appears to be some difference in their deadliness - blue dots in Myanmar are visibly much bigger than those in the Philippines. 
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob7.PNG">
+
+
+### Observation 2 -  Battles are the most deadly event types
+
+While Protests are the most ubiquitous, Battles (in blue dots), on the other hand, are less widely-spread within the region; it is more commonly observed only in Myanmar and the Philippines in the last decade. However, dots representing battles are visibly much bigger in size than any other colors (Event Types) - that is, many of these individual battle events are very deadly. 
+
+Even while the battle events concentrate only in Myanmar and the Philippines, there appears to be some difference in their *deadliness* - blue dots in Myanmar are visibly much bigger than those in the Philippines. 
 
 One of the biggest blue dots (i.e. battle event) in the Philippines saw 39 fatalities reported resulting from a clash between rebel group Abu Sayyaf and the state force. 
 
@@ -607,16 +654,89 @@ There also appears to an anomalously large blue dot in Southern Thailand (see fi
 While dot density provides a nifty overview of the geographical spread, there is definitely still a need for viewers to conduct due diligence to explore the visualization to make sure they are not misinterpreting what they appear to be seeing. 
 
 
+### Observation 3 - Number of conflict events increased manyfolds through the 2010 decade, mainly driven by conflicts in Indonesia, Myanmar and the Philippines
 
-### Observation 2 -  
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob8.PNG" style="width:80%; display:block; margin:0 auto;">
 
+At the start of the 2010 decade, Thailand had the most annual number of conflict events at 1,145 (the Yellow Shirts vs Black Shirt supporters), followed by Cambodia (267 events), Myanmar (211). Vietnam (33), and Laos (1).
 
-### Observation 3 - 
+From the start of the 2010s to the start of the 2020s, we see the annual numbers of conflict events decrease for Thailand, Cambodia and Vietnam, while Laos saw a slight increase (from 1 to 3 events). The one big increase in conflict event (the red line with steep slope) is in Myanmar, which increased almost 400% from 211 to 1,158, surpassing Thailand's 1,145 (which was the highest in 2010) at the start of the decade. Total number of conflict events also more than tripled from 1,657 at the start of the 2010s to 5,227 at the start of the 2020s. Indeed, the 2020 numbers looks even more worrying considering that it was only based on 10 months of records available. 
 
+In fact, Myanmar was not even the country with the most conflict events for the first 10 months of the 2020s - Indonesia with 1,517 and the Philippines at 1,381 ranked first and second respectively. The reason we see them as a dot instead of connecting lines is only because there were no data available back from 2010. 
 
-### Additional Comments
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob10.PNG" style="width:80%; display:block; margin:0 auto;">
 
+Number of fatalities also showed similar patterns: with Myanmar's numbers rising sharply and Thailand's decreasing. 
 
+The four countries with the highest number of event counts also coincides with the four countries with the highest fatality counts. 
+
+One curious observation, though, is that Indonesia has a relatively lower number of fatalities (93) even though it has the largest number of conflict event (1,517). This is in contrast with Philippines, which has lesser events (1,381) but largest number of fatalities (1,205). It shows that events in Indonesia are much are "peaceful" in comparison to the deadly ones in the Philippines, even though they both rank high on the event counts. 
+
+This once again points to the importance of distinguishing the number of events from the number of fatalities - having a lot of conflict events may not necessarily say anything about the impact/deadliness of the conflicts. 
+
+### Observation 4 - Between 2018 and 2019, Myanmar saw the steepest increase in both conflict events and fatalities
+
+We next shift our focus to the years with full data for all countries: 2018-2019.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob9.PNG">
+
+From a broader perspective, we observe that most of the countries had an increase in number of conflict events from 2018 to 2019. The largest increase in conflict event is in Myanmar, where we notice a very steep incline, with the numbers almost doubling. Only Thailand, in blue, saw a slight (almost horizontal) decline. The Slopegraph did not show any of the lines criss-crossing, reflecting that the rank in terms of conflict event counts did not change among the countries between the two years. 
+
+We once again observe similar trends in the fatality Slopegraph - in fact, the steep increase for Myanmar is even more pronounced for the fatality counts:
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob11.PNG">
+
+From the geospatial map, we notice that these events are mainly concentrated in two regions in Myanmar surrounding two separate conflicts - the Shan region conflict between the State and Rebel Group (Brotherhood Alliance) and the Rhakhine state clash also between the State and another Rebel Group (Arakan Army) - both deadly conflicts that resulted in high death counts (as evident in the big dots, large fatality numbers, and also widely reported news by state and international media)
+
+### Observation 5 - The Philippines' War on Drugs: Duterte's term from June 2016 
+
+While Myanmar saw a large increase in both event and fatality counts, the Philippines are the ones who have 'retained' the top spot for both counts. In fact, the country saw high numbers that ranked them top since their data became available from 2016. In 2016 and 2017 (before the intensification of conflict in Myanmar in 2019), the event counts in the Philippines are more than 3 times that of the country with the next highest count (Myanmar).
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob12.PNG">
+
+Unfortunately, we do not have data before 2016. However, we can still compare the numbers before and after 1 July 2016 - the day that current President Duterte assumed office. 
+
+From January to June 2016, we see that the Philippines is already the Southeast Asian country with the highest number of conflict event, at 578 counts. There are some yellow dots (i.e. Violence against Civilians) but there appears to be slightly more blue dots (Battles) in the country.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob13.PNG">
+
+Come July 2016, the conflict event numbers shot up more than 3-fold: conflict event counts for the second half of 2016, or the first 6 months of President Duterte's reign, was 1,851. There is also a shift in the event type, with most of the events being Violence against Civilians (yellow dots). 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob14.PNG">
+
+Fatality counts grew even steeper: from 530 in the first half of the year, to 3,612 deaths in the second half. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob16.PNG">
+
+Hovering over the dots, it is easy to identify that many of these events are police raids on drug suspects - operations commissioned by President Duterte as part of his ["War on Drugs"](https://en.wikipedia.org/wiki/Philippine_drug_war) 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob15.PNG">
+
+Of the 3,612 deaths in the first 6 months of Duterte's term, 3,082 (or 85%) involved civilians or protesters. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob17.PNG">
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob17b.PNG">
+
+In fact, 1,516 (or 42% of the total death due to conflict events) were by State Force on Civilians - almost all attributable to Duterte's War on Drugs. 
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob18.PNG">
+
+The program slowed thereafter, with the annual numbers dropping from 2017's 911 death to 2018's 749 deaths
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob19.PNG">
+
+While both the numbers of events and deaths due to violence against civilians in the Philippines have seen steep decline from the second-half of 2016 (2,213 events, 3,049 deaths) to the first-half of 2020 (427 events, 493 deaths), it remains a league above the rest.
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob21.PNG">
+
+<img src="C:\ISSS608 Visualization Analytics\DataViz Makeover\Data Analytics Blog\_posts\2021-03-12-dataviz-makeover-3\Media\ob20.PNG">
+
+The visualization provides opportunities for user to zoom in and out to understand impact of specific events in particular country, such as President Duterte's War on Drugs as discussed in this segment. 
+
+### Additional Remarks
+
+One of the major flaw of the existing dataset, however, is its lack of complete information for certain countries (e.g. the Philippines, with full data available only from 2016 onwards). Efforts could be put in to include these data to allow a more holistic and robust analysis of the situation in the region, especially in relation to key socio-political events. 
 
 ## Annex - Animating Changes on Geospatial Map 
 
